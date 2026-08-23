@@ -1,0 +1,5 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Complete DC network driven simultaneously by voltage sources $V_1$ and $V_2$.}}{3}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Network response with $V_1$ active and $V_2$ short-circuited.}}{3}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Network response with $V_2$ active and $V_1$ short-circuited.}}{3}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Test circuit for maximum power transfer using $V_{th}=\qty {8}{\volt }$ and $R_i=\qty {663}{\ohm }$.}}{3}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Load power $P_L$ versus load resistance $R_L$, illustrating peak delivery at $R_L = R_i = \qty {663}{\ohm }$.}}{6}{figure.5}%

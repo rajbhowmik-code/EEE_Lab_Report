@@ -1,0 +1,2 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Original DC network featuring $R_1=R_2=R_3=\qty {670}{\ohm }$ and load $R_L=\qty {970}{\ohm }$ driven by $V=\qty {15}{\volt }$.}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Thevenin equivalent circuit driving load $R_L$ via series parameters $V_{th}$ and $R_{th}$.}}{2}{figure.2}%

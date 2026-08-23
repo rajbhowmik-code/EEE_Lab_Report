@@ -1,0 +1,106 @@
+\section{Objective}
+\begin{itemize}
+	\item To gain practical knowledge of basic laboratory equipment used across electrical and electronic experimentation.
+	\item To understand operational principles and hands-on usage of regulated DC power supplies and trainer boards.
+	\item To examine needle-deflection mechanisms and scale readings of traditional analog meters.
+	\item To compare analog VOMs with digital multimeters for voltage, current, and resistance testing.
+	\item To acquire operational skills in displaying, measuring, and analyzing periodic signals on analog and digital storage oscilloscopes.
+	\item To learn signal generation procedures using function generators across different wave types.
+\end{itemize}
+
+\section{Introduction}
+Laboratory testing relies heavily on the correct and cautious operation of standard instruments: power supplies to energize target circuits, breadboards or trainer panels for rapid assembly, multimeters for checking branch parameters, and oscilloscopes paired with function generators for wave observation. Mishandling these units—such as placing an ammeter across active power nodes or grounding an oscilloscope probe to a live potential—can cause hardware damage or component burnout. This experiment introduces key front-panel controls, safety steps, and basic signal evaluation procedures.
+
+\section{Theory}
+
+\subsection{DC Power Supply}
+A benchtop DC supply transforms AC mains power into a steady, adjustable DC output. In Constant Voltage (CV) mode, the equipment keeps a fixed target voltage while output current adjusts according to load resistance. In Constant Current (CC) mode, output current is clamped to a set limit, dropping the voltage to enforce that threshold. To set a safe current limit, the current control is turned counter-clockwise, the terminal leads are temporarily shorted, and the current control is raised to the target limit before clearing the short. Dual-tracking supplies provide balanced positive and negative supply lines relative to a shared ground rail, which is essential for op-amp circuits.
+
+\subsection{Digital/Analog Trainer Board}
+A trainer board combines a central breadboard workspace with integrated modules: a fixed \qty{5}{\volt} DC rail for digital logic, variable supplies, toggle switches for digital input levels, LED indicators for output monitoring, and clock pulse generators for astable or monostable triggering. The primary power switch on the board should remain OFF whenever components are inserted or rewired.
+
+\subsection{Analog Meters}
+Most analog meters rely on Permanent Magnet Moving Coil (PMMC) movements, where current passing through a coil generates torque to deflect an indicator needle. A galvanometer is a high-sensitivity center-zero meter used to detect tiny current flows and directional changes, often for bridge balancing. An ammeter adds a low-resistance shunt in parallel with the coil, yielding minimal internal resistance; it must be wired in series with the load. A voltmeter pairs the coil with a high series resistor, resulting in high internal resistance so it draws negligible current when connected in parallel across a component. An ohmmeter utilizes an internal source to push current through an unpowered resistor and must be zero-adjusted prior to taking measurements.
+
+\subsection{Multimeters}
+An analog multimeter (VOM) combines voltage, current, and resistance measurement functions into a single PMMC assembly using a rotary switch. Range selection must begin at the highest setting and work downward while observing correct DC polarity. A Digital Multimeter (DMM) replaces analog coils with solid-state analog-to-digital converters, eliminating parallax error while providing high input impedance (\qty{10}{\mega\ohm}+), auto-ranging, and diode test features. Current measurements require connecting the DMM in series using the dedicated current jack.
+
+\subsection{Oscilloscope}
+An oscilloscope plots voltage on the vertical (Y) axis against time on the horizontal (X) axis. Analog oscilloscopes sweep an electron beam across a phosphor CRT screen in real time. Digital Storage Oscilloscopes (DSOs) digitize the input signal through an ADC and save it in memory, enabling single-shot capture, automated signal measurements ($V_{pp}$, period, frequency), and math options like FFT. Achieving a stable display requires adjusting the trigger level to match the signal's edge. A 10X attenuation probe adds a \qty{9}{\mega\ohm} series resistance to minimize circuit loading and must be compensated against the scope's internal calibration signal. Selecting a slow horizontal sweep relative to signal frequency leads to aliasing error. The probe's ground clip connects directly to earth ground and must never be attached to a non-zero voltage point.
+
+\subsection{Function Generator}
+A function generator supplies standard periodic signals—sine, square, triangle, and ramp waves—with controllable frequency, amplitude, and DC offset. Benchtop generators are calibrated for a \qty{50}{\ohm} load; when attached directly to a High-Z (\qty{1}{\mega\ohm}) scope input, displayed amplitudes appear doubled unless the generator's output profile is updated to High-Z mode. A function generator acts as a low-power signal source and should not directly power heavy inductive loads.
+
+\section{Apparatus and Components}
+\begin{table}[h!]
+	\centering
+	\caption{List of Equipment Used}
+	\vspace{2mm}
+	\begin{tabular}{llc}
+		\toprule
+		\rowcolor{blue!10}
+		\textbf{Item Description} & \textbf{Specification / Rating} & \textbf{Quantity} \\
+		\midrule
+		DC Power Supply & \qty{0}{\volt}--\qty{30}{\volt}, dual output & 1 \\
+		Digital/Analog Trainer Board & Built-in \qty{5}{\volt} supply, logic switches, LEDs & 1 \\
+		Analog Multimeter (VOM) & Rotary range selector & 1 \\
+		Digital Multimeter (DMM) & Auto-ranging & 1 \\
+		Analog Oscilloscope / DSO & Dual channel & 1 \\
+		Function Generator & Sine/Square/Triangular, \qty{0}{\hertz}--\qty{1}{\mega\hertz} & 1 \\
+		Fixed Resistor (Test Load) & \qty{1.0}{\kilo\ohm}, \qty{0.25}{\watt} & 1 \\
+		Solderless Breadboard & Standard Tie-Point & 1 \\
+		Connecting Wires \& BNC Probes & Jumper wires, oscilloscope probes & As required \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:apparatus2}
+\end{table}
+
+\section{Circuit Diagram}
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}[american, scale=1.0]
+		\draw (0,0) to[sV, l=$v_s(t)$] (0,3)
+		(0,3) to[R, l=$1.0\,\mathrm{k}\Omega$, i=$I$] (4,3) -- (4,0) -- (0,0);
+		\draw (4,0) node[ground]{};
+		\node at (0,-0.6) [below] {Function Generator};
+		\draw[-{Stealth[length=2mm]}] (4.3,3) -- (5.3,3) node[right]{To Oscilloscope CH1};
+		\draw (4.3,0.3) -- (5.3,0.3) node[right]{To Oscilloscope Ground};
+	\end{circuitikz}
+	\caption{Basic instrument test setup: a function generator drives a resistive load while an oscilloscope probe monitors the voltage across it.}
+	\label{fig:instrsetup}
+\end{figure}
+
+\section{Experimental Procedure}
+\begin{enumerate}
+	\item \textbf{Power Supply Setup:} Turn on the DC power supply before attaching external leads, adjusting voltage knobs to set the required level. Establish a safety current limit by temporarily shorting output terminals and turning the current dial to the target value before removing the short connection.
+	\item \textbf{DMM Resistance Measurement:} Switch the DMM to resistance mode and measure the \qty{1.0}{\kilo\ohm} test load, cross-checking against color band calculations.
+	\item \textbf{Function Generator and Oscilloscope Setup:} Construct the circuit shown in Figure~\ref{fig:instrsetup}. Set the function generator to produce a \qty{1}{\kilo\hertz} sine wave at a designated amplitude prior to turning on output. Attach the scope probe across the resistor and adjust Volts/Div, Time/Div, and Trigger Level controls until a clear waveform appears.
+	\item \textbf{Probe Compensation:} Connect the oscilloscope probe to the calibration output pin and adjust the probe's trimmer capacitor until square wave edges show square corners without overshoot.
+	\item \textbf{Waveform Measurement:} Calculate peak-to-peak voltage $V_{pp}$ and period $T$ from the display screen, calculating frequency $f = 1/T$ to compare against generator settings.
+\end{enumerate}
+
+\section{Observations}
+This session served as an instrument orientation exercise, so formal signed data sheets were not compiled. Practical outcomes from testing procedures in Section~5 are summarized below:
+
+\begin{itemize}
+	\item Constant Voltage and Constant Current operations were verified on the DC supply: the CV indicator remained active under nominal loads, switching to CC mode when load current hit the current ceiling.
+	\item Resistance values measured on the DMM for the \qty{1.0}{\kilo\ohm} load agreed with color code calculations within component tolerance margins.
+	\item The oscilloscope showed a stable waveform once trigger settings were dialed in, confirming correct probe ground placement.
+	\item Probe calibration produced a flat-topped square wave after trimming, ensuring accurate high-frequency signal reproduction.
+	\item Calculated signal frequency derived from measured period $T$ matched the generator's front-panel frequency readout.
+\end{itemize}
+
+\section{Discussion}
+Because this session prioritized instrument handling over numerical calculations, error analysis was not conducted. Key practical insights include: (i) ammeters feature near-zero internal resistance and must only be wired in series to prevent short-circuiting power sources; (ii) oscilloscope ground leads connect to earth ground and must never touch active circuit nodes; (iii) function generator output readings depend on load matching, where High-Z termination doubles expected output voltages unless generator profile settings are updated; and (iv) checking probe compensation prior to taking high-frequency signal measurements prevents waveform distortion errors.
+
+\section{Conclusion}
+This lab session provided practical experience operating essential testing instruments: DC power supplies, trainer boards, digital multimeters, oscilloscopes, and function generators. Voltage and current limiting functions, series and parallel meter connections, and oscilloscope triggering procedures were systematically tested. These practical competencies are vital for subsequent laboratory work in circuit analysis.
+
+\section{References}
+\begin{tcolorbox}[colback=gray!5, colframe=gray!40, arc=2mm]
+	\begin{enumerate}
+		\item Cooper, W. D., \& Helfrick, A. D. (1985). \textit{Electronic Instrumentation and Measurement Techniques} (3rd ed.). Prentice-Hall.
+		\item Boylestad, R. L., \& Nashelsky, L. (2013). \textit{Electronic Devices and Circuit Theory} (11th ed.). Pearson.
+		\item Alexander, C. K., \& Sadiku, M. N. O. (2016). \textit{Fundamentals of Electric Circuits} (6th ed.). McGraw-Hill Education.
+	\end{enumerate}
+\end{tcolorbox}

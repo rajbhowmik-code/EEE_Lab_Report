@@ -1,0 +1,2 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Circuit setup for KCL verification: source current $I$ divides at the main node into parallel branch currents $I_1$ and $I_2$, giving $I = I_1 + I_2$.}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Circuit setup for KVL verification: Loop 1 ($R_1$, $R_3$, and $V$) and Loop 2 ($R_2$ and $R_3$) define closed loops.}}{2}{figure.2}%

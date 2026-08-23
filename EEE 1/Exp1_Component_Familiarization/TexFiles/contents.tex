@@ -1,0 +1,180 @@
+\section{Objective}
+\begin{itemize}
+	\item To develop practical capability in recognizing and inspecting standard passive and active electronic parts.
+	\item To master interpretation of physical component markings, schematic icons, and basic semiconductor operations.
+	\item To inspect integrated logic gate ICs and experimentally construct their input-output truth tables.
+	\item To gain hands-on expertise building temporary circuits on a solderless breadboard.
+	\item To utilize a Digital Multimeter (DMM) for quantitative parameter checks and continuity testing.
+\end{itemize}
+
+\section{Introduction}
+Executing functional circuit design requires an engineer to accurately identify components, decode technical markings, and construct physical prototypes on a breadboard. This introductory lab builds foundational hands-on skill with fundamental passive elements (resistors, capacitors, and inductors), active semiconductor components (diodes and transistors), integrated digital logic gates, and solderless prototyping boards used across future laboratory modules.
+
+Proper component verification—such as decoding color bands on axial resistors or verifying electrolytic capacitor orientation—is crucial for avoiding circuit malfunctions or component destruction. This session establishes these essential skills through direct inspection, multimeter testing, and practical breadboard setup.
+
+\section{Theory}
+
+\subsection{Resistors}
+Resistors introduce specific opposition to current flow according to Ohm's Law, $V = IR$. Standard axial resistors mark nominal resistance and manufacturing tolerance using color bands. Four-band resistors are read sequentially: bands one and two represent significant digits, band three provides the multiplier ($10^{n}$), and band four indicates tolerance.
+
+\begin{table}[h!]
+	\centering
+	\caption{Standard Resistor Color Code Reference}
+	\vspace{2mm}
+	\begin{tabular}{lcccc}
+		\toprule
+		\rowcolor{blue!10}
+		\textbf{Color} & \textbf{1st Digit} & \textbf{2nd Digit} & \textbf{Multiplier} & \textbf{Tolerance} \\
+		\midrule
+		Black  & 0 & 0 & $10^{0}$ & -- \\
+		Brown  & 1 & 1 & $10^{1}$ & $\pm 1\%$ \\
+		Red    & 2 & 2 & $10^{2}$ & $\pm 2\%$ \\
+		Orange & 3 & 3 & $10^{3}$ & $\pm 3\%$ \\
+		Yellow & 4 & 4 & $10^{4}$ & -- \\
+		Green  & 5 & 5 & $10^{5}$ & -- \\
+		Blue   & 6 & 6 & $10^{6}$ & -- \\
+		Violet & 7 & 7 & $10^{7}$ & -- \\
+		Gray   & 8 & 8 & $10^{8}$ & -- \\
+		White  & 9 & 9 & $10^{9}$ & -- \\
+		Gold   & -- & -- & $10^{-1}$ & $\pm 5\%$ \\
+		Silver & -- & -- & $10^{-2}$ & $\pm 10\%$ \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:colorcode}
+\end{table}
+
+Common fixed-resistor variants include carbon film, metal film (high precision and low temperature drift), wirewound (suited for high power), and surface-mount devices. Variable resistors (potentiometers) permit manual resistance adjustments using a movable internal wiper.
+
+\subsection{Capacitors}
+Capacitors store electrical charge within an electric field generated across dielectric-separated conductive plates. Ceramic capacitors offer non-polarized, compact construction suited for high-frequency decoupling. Electrolytic capacitors provide higher capacitance values within a polarized container, making them ideal for DC smoothing filters. Mylar and tantalum capacitors provide stable operation in precision and high-density layouts.
+
+\subsection{Inductors}
+Inductors store energy inside a magnetic field established by current flowing through a wound coil. Voltage induced across an inductor follows
+\[
+V = L \frac{di}{dt},
+\]
+where $L$ denotes inductance in Henrys. Magnetic core selection (air, iron, or ferrite) dictates current capacity and high-frequency core loss characteristics.
+
+\subsection{Diodes}
+A semiconductor diode permits unidirectional current flow. Silicon P-N junction diodes exhibit a forward bias voltage drop around \qty{0.7}{\volt}. Zener diodes function safely within reverse breakdown to maintain steady reference voltages. Light Emitting Diodes (LEDs) emit light under forward bias and require series current-limiting resistors to protect against overcurrent destruction.
+
+\subsection{Transistors}
+Transistors operate as active control devices for signal amplification and switching. Bipolar Junction Transistors (BJTs) use small base current inputs to regulate larger collector-emitter currents ($I_C = \beta I_B$). Field-Effect Transistors (MOSFETs) provide voltage-controlled switching with near-zero gate current draw.
+
+\subsection{Digital Logic Gate ICs}
+Digital logic circuits process binary signals represented by discrete voltage bands (Logic 1 $\approx$ \qty{5}{\volt}, Logic 0 $\approx$ \qty{0}{\volt}). Standard 7400-series TTL ICs house multiple logic gates within integrated dual in-line packages.
+
+\begin{table}[h!]
+	\centering
+	\caption{Common 2-Input Logic Gate ICs and Truth Tables}
+	\vspace{2mm}
+	\begin{tabular}{llcccc}
+		\toprule
+		\rowcolor{blue!10}
+		\textbf{IC} & \textbf{Gate} & \multicolumn{4}{c}{\textbf{Output $Y$ for inputs $A,B$}} \\
+		\rowcolor{blue!10}
+		& & \textbf{00} & \textbf{01} & \textbf{10} & \textbf{11} \\
+		\midrule
+		7408 & AND  & 0 & 0 & 0 & 1 \\
+		7432 & OR   & 0 & 1 & 1 & 1 \\
+		7400 & NAND & 1 & 1 & 1 & 0 \\
+		7402 & NOR  & 1 & 0 & 0 & 0 \\
+		7486 & XOR  & 0 & 1 & 1 & 0 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:gates}
+\end{table}
+
+\subsection{Breadboard}
+Solderless breadboards facilitate temporary circuit assembly. Outer power rails supply common supply voltages and ground, while interior five-hole terminal strips host component connections. A central divider trench splits opposing sides to mount Dual In-line Package (DIP) ICs securely.
+
+\section{Apparatus and Components}
+\begin{table}[h!]
+	\centering
+	\caption{List of Equipment and Components Used}
+	\vspace{2mm}
+	\begin{tabular}{llc}
+		\toprule
+		\rowcolor{blue!10}
+		\textbf{Item Description} & \textbf{Specification / Rating} & \textbf{Quantity} \\
+		\midrule
+		Digital Multimeter (DMM) & Auto-ranging & 1 \\
+		Solderless Breadboard & Standard Tie-Point & 1 \\
+		DC Power Supply & \qty{5}{\volt} regulated & 1 \\
+		Fixed Resistors & \qty{1.0}{\kilo\ohm}, \qty{47}{\kilo\ohm}, \qty{220}{\kilo\ohm}, \qty{680}{\ohm} & 1 each \\
+		Current-Limiting Resistor & \qty{220}{\ohm}, \qty{0.25}{\watt} & 1 \\
+		Electrolytic \& Ceramic Capacitors & Assorted values & 2 \\
+		Axial Inductor & \qty{10}{\micro\henry} & 1 \\
+		Signal Diode & 1N4007 & 1 \\
+		Light Emitting Diode (LED) & \qty{5}{\milli\meter}, Red & 1 \\
+		NPN Transistor & BC547 & 1 \\
+		Logic IC & 74HC08 (Quad 2-Input AND Gate) & 1 \\
+		Connecting Wires & Jumper Wires & As required \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:apparatus1}
+\end{table}
+
+\section{Circuit Diagram}
+\begin{figure}[h!]
+	\centering
+	\begin{circuitikz}[american, scale=1.0]
+		\draw (0,0) to[battery1, v=\qty{5}{\volt}, invert] (0,3)
+		(0,3) to[R, l=$220\,\Omega$, i=$I$] (4,3)
+		to[leD, l=LED] (4,0) -- (0,0);
+		\draw (4,0) node[ground]{};
+	\end{circuitikz}
+	\caption{Simple LED test circuit assembled on breadboard with series current-limiting protection.}
+	\label{fig:ledcircuit}
+\end{figure}
+
+\section{Experimental Procedure}
+\begin{enumerate}
+	\item \textbf{Resistor Identification:} Determine nominal resistance values using color code bands and cross-check each resistor against DMM resistance measurements.
+	\item \textbf{Semiconductor Inspection:} Examine polarities on capacitors, the cathode line on the 1N4007 diode, and pin arrangements on the BC547 transistor.
+	\item \textbf{Breadboard LED Circuit Assembly:} Construct the LED circuit from Figure~\ref{fig:ledcircuit} on the breadboard. Connect power rails to a \qty{5}{\volt} DC supply and verify LED illumination.
+	\item \textbf{Logic Gate Verification:} Position the 74HC08 IC across the breadboard's central trench. Connect $V_{CC}$ (Pin 14) and GND (Pin 7) to power rails, apply all four binary input states across Pins 1 and 2, and record output voltages at Pin 3 using the DMM.
+\end{enumerate}
+
+\section{Observations}
+Because this laboratory session focused on component familiarization and practical verification, signed data sheets were not generated. Qualitative observations are outlined below:
+
+\begin{itemize}
+	\item Four test resistors were decoded using color bands and confirmed via DMM measurements within standard tolerance limits.
+	\item Polarity markings on electrolytic capacitors, diode cathode bands, and transistor pin layouts matched datasheet specifications.
+	\item The breadboard LED circuit functioned correctly upon powering up, confirming proper breadboard bus connectivity.
+	\item Output logic states verified across the 74HC08 AND gate IC matched expected truth table values in Table~\ref{tab:gates}.
+\end{itemize}
+
+\begin{table}[h!]
+	\centering
+	\caption{Resistor Color Code Reference}
+	\vspace{2mm}
+	\begin{tabular}{ccccc}
+		\toprule
+		\rowcolor{blue!10}
+		\textbf{Resistor} & \textbf{Band 1} & \textbf{Band 2} & \textbf{Band 3} & \textbf{Nominal $R$} \\
+		\midrule
+		$R_1$ & Brown & Black & Red & \qty{1000}{\ohm} \\
+		$R_2$ & Yellow & Violet & Orange & \qty{47000}{\ohm} \\
+		$R_3$ & Red & Red & Yellow & \qty{220000}{\ohm} \\
+		$R_4$ & Blue & Gray & Brown & \qty{680}{\ohm} \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:rescolor}
+\end{table}
+
+\section{Discussion}
+Key practical takeaways include: (i) color-code values reflect nominal ratings, so DMM measurements are necessary to confirm true values before circuit assembly; (ii) reverse-biasing polarized components leads to component damage or circuit failure; and (iii) understanding breadboard internal strip connectivity prevents unexpected short circuits during breadboard prototyping.
+
+\section{Conclusion}
+This exercise provided hands-on familiarization with basic passive and active electronic components, digital logic ICs, and solderless breadboards. Color-code identification was confirmed with DMM measurements, and the operation of an LED indicator and 74HC08 AND gate was verified on the breadboard.
+
+\section{References}
+\begin{tcolorbox}[colback=gray!5, colframe=gray!40, arc=2mm]
+	\begin{enumerate}
+		\item Boylestad, R. L., \& Nashelsky, L. (2013). \textit{Electronic Devices and Circuit Theory} (11th ed.). Pearson.
+		\item Alexander, C. K., \& Sadiku, M. N. O. (2016). \textit{Fundamentals of Electric Circuits} (6th ed.). McGraw-Hill Education.
+		\item Boylestad, R. L. (2015). \textit{Introductory Circuit Analysis} (13th ed.). Pearson.
+	\end{enumerate}
+\end{tcolorbox}

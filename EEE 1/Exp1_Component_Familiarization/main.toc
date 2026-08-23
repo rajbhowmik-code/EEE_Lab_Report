@@ -1,0 +1,20 @@
+\contentsline {section}{Declaration}{i}{section*.1}%
+\contentsline {section}{List of Figures}{iii}{section*.2}%
+\contentsline {section}{List of Tables}{iv}{section*.3}%
+\contentsline {section}{Objective}{1}{section*.3}%
+\contentsline {section}{Introduction}{1}{section*.3}%
+\contentsline {section}{Theory}{1}{section*.3}%
+\contentsline {subsection}{Resistors}{1}{section*.4}%
+\contentsline {subsection}{Capacitors}{2}{table.1}%
+\contentsline {subsection}{Inductors}{2}{table.1}%
+\contentsline {subsection}{Diodes}{2}{table.1}%
+\contentsline {subsection}{Transistors}{2}{table.1}%
+\contentsline {subsection}{Digital Logic Gate ICs}{2}{table.1}%
+\contentsline {subsection}{Breadboard}{2}{table.2}%
+\contentsline {section}{Apparatus and Components}{3}{table.2}%
+\contentsline {section}{Circuit Diagram}{3}{table.3}%
+\contentsline {section}{Experimental Procedure}{3}{figure.1}%
+\contentsline {section}{Observations}{4}{Item.4}%
+\contentsline {section}{Discussion}{4}{table.4}%
+\contentsline {section}{Conclusion}{4}{table.4}%
+\contentsline {section}{References}{4}{table.4}%
