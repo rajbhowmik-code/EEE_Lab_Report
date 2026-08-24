@@ -29,3 +29,4 @@
 \contentsline {section}{Discussion and Sources of Error}{6}{section*.9}%
 \contentsline {section}{Conclusion}{6}{Item.14}%
 \contentsline {section}{References}{7}{Item.14}%
+\contentsline {section}{Lab Data Sheet}{7}{Item.17}%

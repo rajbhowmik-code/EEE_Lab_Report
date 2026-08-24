@@ -17,3 +17,4 @@
 \contentsline {section}{Discussion and Sources of Error}{3}{table.2}%
 \contentsline {section}{Conclusion}{4}{Item.11}%
 \contentsline {section}{References}{4}{Item.11}%
+\contentsline {section}{Lab Data Sheet}{5}{Item.14}%

@@ -1,0 +1,18 @@
+\contentsline {section}{Declaration}{i}{section*.1}%
+\contentsline {section}{List of Figures}{iii}{section*.2}%
+\contentsline {section}{List of Tables}{iv}{section*.3}%
+\contentsline {section}{Objective}{1}{section*.4}%
+\contentsline {section}{Introduction}{1}{section*.5}%
+\contentsline {section}{Theory}{1}{section*.6}%
+\contentsline {subsection}{Cycle-by-Cycle Conduction Analysis}{1}{subsection*.7}%
+\contentsline {subsection}{Mathematical Formulation of Rectifier Parameters}{1}{subsection*.8}%
+\contentsline {subsection}{Effect of a Capacitive Filter}{2}{subsection*.9}%
+\contentsline {section}{Apparatus and Components}{2}{section*.10}%
+\contentsline {section}{Circuit Diagram}{2}{section*.11}%
+\contentsline {section}{Experimental Procedure}{2}{section*.12}%
+\contentsline {section}{Theoretical Calculation}{3}{section*.13}%
+\contentsline {section}{Data Collection}{3}{section*.14}%
+\contentsline {subsection}{Oscilloscope Waveforms}{4}{subsection*.15}%
+\contentsline {section}{Result Analysis}{4}{section*.16}%
+\contentsline {section}{Conclusion}{4}{section*.17}%
+\contentsline {section}{References}{5}{section*.18}%

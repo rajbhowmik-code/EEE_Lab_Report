@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.23)  23 AUG 2026 20:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.23)  25 AUG 2026 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -789,6 +789,14 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidthlast=\dimen297
 \titlewidthfirst=\dimen298
 )
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count333
+\float@exts=\toks46
+\float@box=\box83
+\@float@everytoks=\toks47
+\@floatcapt=\box84
+)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup6
@@ -804,21 +812,21 @@ Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count333
-\calc@Bcount=\count334
+\calc@Acount=\count334
+\calc@Bcount=\count335
 \calc@Adimen=\dimen299
 \calc@Bdimen=\dimen300
 \calc@Askip=\skip60
 \calc@Bskip=\skip61
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count335
+\calc@Ccount=\count336
 \calc@Cskip=\skip62
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count336
+\g_MT_multlinerow_int=\count337
 \l_MT_multwidth_dim=\dimen301
 \origjot=\skip63
 \l_MT_shortvdotswithinadjustabove_dim=\dimen302
@@ -827,43 +835,43 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_intertext_sep=\dimen305
 \l_MT_above_shortintertext_sep=\dimen306
 \l_MT_below_shortintertext_sep=\dimen307
-\xmathstrut@box=\box83
+\xmathstrut@box=\box85
 \xmathstrut@dim=\dimen308
 )
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2024-01-25 v3.3.10 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count337
-\l__siunitx_number_exponent_fixed_int=\count338
-\l__siunitx_number_min_decimal_int=\count339
-\l__siunitx_number_min_integer_int=\count340
-\l__siunitx_number_round_precision_int=\count341
-\l__siunitx_number_lower_threshold_int=\count342
-\l__siunitx_number_upper_threshold_int=\count343
-\l__siunitx_number_group_first_int=\count344
-\l__siunitx_number_group_size_int=\count345
-\l__siunitx_number_group_minimum_int=\count346
+\l__siunitx_number_uncert_offset_int=\count338
+\l__siunitx_number_exponent_fixed_int=\count339
+\l__siunitx_number_min_decimal_int=\count340
+\l__siunitx_number_min_integer_int=\count341
+\l__siunitx_number_round_precision_int=\count342
+\l__siunitx_number_lower_threshold_int=\count343
+\l__siunitx_number_upper_threshold_int=\count344
+\l__siunitx_number_group_first_int=\count345
+\l__siunitx_number_group_size_int=\count346
+\l__siunitx_number_group_minimum_int=\count347
 \l__siunitx_angle_tmp_dim=\dimen309
-\l__siunitx_angle_marker_box=\box84
-\l__siunitx_angle_unit_box=\box85
-\l__siunitx_compound_count_int=\count347
+\l__siunitx_angle_marker_box=\box86
+\l__siunitx_angle_unit_box=\box87
+\l__siunitx_compound_count_int=\count348
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
-\l__siunitx_table_tmp_box=\box86
+\l__siunitx_table_tmp_box=\box88
 \l__siunitx_table_tmp_dim=\dimen310
 \l__siunitx_table_column_width_dim=\dimen311
-\l__siunitx_table_integer_box=\box87
-\l__siunitx_table_decimal_box=\box88
-\l__siunitx_table_uncert_box=\box89
-\l__siunitx_table_before_box=\box90
-\l__siunitx_table_after_box=\box91
+\l__siunitx_table_integer_box=\box89
+\l__siunitx_table_decimal_box=\box90
+\l__siunitx_table_uncert_box=\box91
+\l__siunitx_table_before_box=\box92
+\l__siunitx_table_after_box=\box93
 \l__siunitx_table_before_dim=\dimen312
 \l__siunitx_table_carry_dim=\dimen313
-\l__siunitx_unit_tmp_int=\count348
-\l__siunitx_unit_position_int=\count349
-\l__siunitx_unit_total_int=\count350
+\l__siunitx_unit_tmp_int=\count349
+\l__siunitx_unit_position_int=\count350
+\l__siunitx_unit_total_int=\count351
 )
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2023/12/09{} The CircuiTikz circuit drawing package version
@@ -909,9 +917,9 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 zlibraryfpu.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
 )) (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
-\pgf@circ@count@a=\count351
-\pgf@circ@count@b=\count352
-\pgf@circ@count@c=\count353
+\pgf@circ@count@a=\count352
+\pgf@circ@count@b=\count353
+\pgf@circ@count@c=\count354
 \pgf@circ@res@up=\dimen325
 \pgf@circ@res@down=\dimen326
 \pgf@circ@res@zero=\dimen327
@@ -925,14 +933,14 @@ zlibraryfpu.code.tex
 \pgfstartlinewidth=\dimen335
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
-\ctikz@scratchbox=\box92
+\ctikz@scratchbox=\box94
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
-\pgf@circ@res@count=\count354
+\pgf@circ@res@count=\count355
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex)
@@ -989,65 +997,65 @@ File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
 s.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box93
-\pgfnodeparttwobox=\box94
-\pgfnodepartthreebox=\box95
-\pgfnodepartfourbox=\box96
-\pgfnodeparttwentybox=\box97
-\pgfnodepartnineteenbox=\box98
-\pgfnodeparteighteenbox=\box99
-\pgfnodepartseventeenbox=\box100
-\pgfnodepartsixteenbox=\box101
-\pgfnodepartfifteenbox=\box102
-\pgfnodepartfourteenbox=\box103
-\pgfnodepartthirteenbox=\box104
-\pgfnodeparttwelvebox=\box105
-\pgfnodepartelevenbox=\box106
-\pgfnodeparttenbox=\box107
-\pgfnodepartninebox=\box108
-\pgfnodeparteightbox=\box109
-\pgfnodepartsevenbox=\box110
-\pgfnodepartsixbox=\box111
-\pgfnodepartfivebox=\box112
+\pgfnodepartlowerbox=\box95
+\pgfnodeparttwobox=\box96
+\pgfnodepartthreebox=\box97
+\pgfnodepartfourbox=\box98
+\pgfnodeparttwentybox=\box99
+\pgfnodepartnineteenbox=\box100
+\pgfnodeparteighteenbox=\box101
+\pgfnodepartseventeenbox=\box102
+\pgfnodepartsixteenbox=\box103
+\pgfnodepartfifteenbox=\box104
+\pgfnodepartfourteenbox=\box105
+\pgfnodepartthirteenbox=\box106
+\pgfnodeparttwelvebox=\box107
+\pgfnodepartelevenbox=\box108
+\pgfnodeparttenbox=\box109
+\pgfnodepartninebox=\box110
+\pgfnodeparteightbox=\box111
+\pgfnodepartsevenbox=\box112
+\pgfnodepartsixbox=\box113
+\pgfnodepartfivebox=\box114
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 22.
+h' as default language. on input line 24.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-2.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count355
-\l__pdf_internal_box=\box113
+\l__color_backend_stack_int=\count356
+\l__pdf_internal_box=\box115
 )
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1085,17 +1093,17 @@ LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count356
+\scratchcounter=\count357
 \scratchdimen=\dimen337
-\scratchbox=\box114
-\nofMPsegments=\count357
-\nofMParguments=\count358
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count359
+\scratchbox=\box116
+\nofMPsegments=\count358
+\nofMParguments=\count359
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count360
 \MPscratchDim=\dimen338
-\MPnumerator=\count360
-\makeMPintoPDFobject=\count361
-\everyMPtoPDFconversion=\toks47
+\MPnumerator=\count361
+\makeMPintoPDFobject=\count362
+\everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
@@ -1113,8 +1121,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count362
-Package hyperref Info: Link coloring OFF on input line 22.
+\c@lstlisting=\count363
+Package hyperref Info: Link coloring OFF on input line 24.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1127,9 +1135,9 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 22.
+or `english'. on input line 24.
  (./TexFiles/titlePage.tex
-<Figures/logo/LogoSUST.png, id=111, 60.225pt x 65.5248pt>
+<Figures/logo/LogoSUST.png, id=115, 60.225pt x 65.5248pt>
 File: Figures/logo/LogoSUST.png Graphic file (type png)
 <use Figures/logo/LogoSUST.png>
 Package pdftex.def Info: Figures/logo/LogoSUST.png  used on input line 22.
@@ -1169,7 +1177,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/base/8r.enc} <./Figures/logo/LogoSUST.png>]) (./TexFiles/dec
 laration.tex
-<Figures/signature/your_signature.png, id=121, 1606.0pt x 868.24374pt>
+<Figures/signature/your_signature.png, id=125, 1606.0pt x 868.24374pt>
 File: Figures/signature/your_signature.png Graphic file (type png)
 <use Figures/signature/your_signature.png>
 Package pdftex.def Info: Figures/signature/your_signature.png  used on input li
@@ -1223,23 +1231,55 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.87 ...ion*{Part A: Original Circuit Measurement}
-                                                   [1] [2] [3]) [4] (./main.aux
-)
+                                                   [1] [2
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 	\item C
+             onnect load $R_L$ across the equivalent circuit and record resu...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 	\item C
+             onnect load $R_L$ across the equivalent circuit and record resu...
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.99 	\item C
+             onnect load $R_L$ across the equivalent circuit and record resu...
+] [3
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.150 
+      ]
+<Figures/datasheet2.png, id=196, 903.375pt x 1402.23875pt>
+File: Figures/datasheet2.png Graphic file (type png)
+<use Figures/datasheet2.png>
+Package pdftex.def Info: Figures/datasheet2.png  used on input line 162.
+(pdftex.def)             Requested size: 329.7636pt x 511.86638pt.
+ [4]) [5 <./Figures/datasheet2.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9B570BC2D5675D577DCA20FAC79FB5A0;2524.
+(rerunfilecheck)             Checksum: 2B6FF8D837AE73A73367D6C570734593;2642.
  ) 
 Here is how much of TeX's memory you used:
- 52048 strings out of 474222
- 1277900 string characters out of 5748733
- 1950975 words of memory out of 5000000
- 73641 multiletter control sequences out of 15000+600000
- 585172 words of font info for 90 fonts, out of 8000000 for 9000
+ 52125 strings out of 474222
+ 1279135 string characters out of 5748733
+ 1951975 words of memory out of 5000000
+ 73712 multiletter control sequences out of 15000+600000
+ 587305 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,11n,121p,604b,1307s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,11n,121p,604b,1309s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
@@ -1247,10 +1287,10 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 185577 bytes).
+Output written on main.pdf (10 pages, 406103 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 252 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 332 words of extra memory for PDF output out of 10000 (max. 10000000)
 

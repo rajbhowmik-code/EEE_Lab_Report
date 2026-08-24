@@ -13,6 +13,7 @@
 \RequirePackage{colortbl}
 \RequirePackage{mathptmx}
 \RequirePackage{titlesec}
+\RequirePackage{float}
 
 \definecolor{primaryColor}{RGB}{15, 60, 110}   
 \definecolor{accentColor}{RGB}{70, 90, 120}    
@@ -32,6 +33,6 @@
 \RequirePackage[american]{circuitikz}
 \usetikzlibrary{shapes, arrows.meta, positioning}
 
-\graphicspath{{Figures/}}
+\graphicspath{{Figures/}{logo/}{signature/}}
 
 \setcounter{secnumdepth}{0}

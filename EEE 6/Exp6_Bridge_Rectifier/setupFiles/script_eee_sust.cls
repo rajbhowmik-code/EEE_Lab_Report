@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{script_eee_sust}[2026/08/25 EEE SUST Lab Class - Navy Theme]
+\ProvidesClass{setupFiles/script_eee_sust}[2026/08/25 EEE SUST Lab Class - Blue Theme]
 
 \LoadClass[a4paper, 11pt]{article}
 
@@ -8,11 +8,19 @@
 \RequirePackage{booktabs}
 \RequirePackage{enumitem}
 \RequirePackage[most]{tcolorbox}
-\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{xcolor}
 \RequirePackage{colortbl}
 \RequirePackage{mathptmx}
 \RequirePackage{titlesec}
+\RequirePackage{float}
+
+\RequirePackage[
+colorlinks=false,
+pdfborder={0 0 1},
+linkbordercolor=white,
+urlbordercolor=white,
+citebordercolor=white
+]{hyperref}
 
 \definecolor{primaryColor}{RGB}{15, 60, 110}   
 \definecolor{accentColor}{RGB}{70, 90, 120}    
@@ -32,6 +40,6 @@
 \RequirePackage[american]{circuitikz}
 \usetikzlibrary{shapes, arrows.meta, positioning}
 
-\graphicspath{{Figures/}}
+\graphicspath{{Figures/}{logo/}{signature/}}
 
 \setcounter{secnumdepth}{0}

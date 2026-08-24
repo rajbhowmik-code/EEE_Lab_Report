@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.23)  23 AUG 2026 20:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.8.23)  24 AUG 2026 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1015,9 +1015,9 @@ zlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 22.
+h' as default language. on input line 24.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-2.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -1030,24 +1030,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1114,7 +1114,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \c@lstlisting=\count362
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 24.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1127,9 +1127,9 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 22.
+or `english'. on input line 24.
  (./TexFiles/titlePage.tex
-<Figures/logo/LogoSUST.png, id=118, 60.225pt x 65.5248pt>
+<Figures/logo/LogoSUST.png, id=122, 60.225pt x 65.5248pt>
 File: Figures/logo/LogoSUST.png Graphic file (type png)
 <use Figures/logo/LogoSUST.png>
 Package pdftex.def Info: Figures/logo/LogoSUST.png  used on input line 22.
@@ -1169,7 +1169,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/base/8r.enc} <./Figures/logo/LogoSUST.png>]) (./TexFiles/dec
 laration.tex
-<Figures/signature/your_signature.png, id=128, 1606.0pt x 868.24374pt>
+<Figures/signature/your_signature.png, id=132, 1606.0pt x 868.24374pt>
 File: Figures/signature/your_signature.png Graphic file (type png)
 <use Figures/signature/your_signature.png>
 Package pdftex.def Info: Figures/signature/your_signature.png  used on input li
@@ -1228,20 +1228,26 @@ l.81 \end{figure}
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 135.
 
-[3]) [4] (./main.aux)
+[3]
+<Figures/datasheet1.png, id=207, 902.37125pt x 1411.2725pt>
+File: Figures/datasheet1.png Graphic file (type png)
+<use Figures/datasheet1.png>
+Package pdftex.def Info: Figures/datasheet1.png  used on input line 174.
+(pdftex.def)             Requested size: 327.29053pt x 511.86928pt.
+ [4]) [5 <./Figures/datasheet1.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9727F42FE2DE05B92427106E8FC0FBB2;2941.
+(rerunfilecheck)             Checksum: 4C5A1C0E3ED0FA5AB0412818C3136729;3059.
  ) 
 Here is how much of TeX's memory you used:
- 52140 strings out of 474222
- 1280138 string characters out of 5748733
- 1954975 words of memory out of 5000000
- 73726 multiletter control sequences out of 15000+600000
- 589001 words of font info for 96 fonts, out of 8000000 for 9000
+ 52154 strings out of 474222
+ 1280429 string characters out of 5748733
+ 1955975 words of memory out of 5000000
+ 73738 multiletter control sequences out of 15000+600000
+ 591134 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,14n,121p,548b,1076s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
@@ -1251,10 +1257,10 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 186386 bytes).
+Output written on main.pdf (10 pages, 407161 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 500000)
- 335 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 267 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 348 words of extra memory for PDF output out of 10000 (max. 10000000)
 
