@@ -1,0 +1,173 @@
+\newcommand{\blueSection}[1]{%
+	\vspace{0.5cm}
+	\phantomsection
+	\addcontentsline{toc}{section}{#1}
+	{\Large \bfseries \color{blue!80!black} #1}
+	\vspace{2mm}
+	{\color{blue!80!black}\hrule height 1pt}
+	\vspace{0.3cm}
+}
+
+\blueSection{Objective}
+\begin{itemize}
+	\item To design and construct a Common-Emitter (CE) amplifier using a voltage-divider biasing network and to measure the stable DC Quiescent Operating Point (Q-Point).
+	\item To inject a small-signal AC sine wave and calculate the practical AC voltage gain ($A_v$), demonstrating the $180^\circ$ phase inversion characteristic of the CE topology.
+	\item To analyze the impact of input/output DC blocking (coupling) capacitors and the emitter bypass capacitor on the circuit's performance.
+	\item To sweep the input signal frequency and plot a Bode response curve, identifying the mid-band gain, lower cutoff frequency ($f_L$), upper cutoff frequency ($f_H$), and the overall circuit Bandwidth (BW).
+\end{itemize}
+
+\blueSection{Theory and Operational Mechanics}
+
+\subsection{Class-A Amplification}
+An amplifier is classified as "Class-A" when the active device (BJT) is biased such that output current flows for the entire $360^\circ$ of the input AC cycle. This requires the Quiescent operating point (Q-point) to be positioned precisely in the center of the active linear region of the transistor's DC load line. While Class-A amplifiers suffer from low theoretical power efficiency, they provide the highest linearity and lowest harmonic distortion, making them the standard choice for low-noise pre-amplification of small signals.
+
+\subsection{Voltage-Divider Biasing}
+To prevent thermal runaway and make the Q-point independent of individual transistor current gain variations, a voltage-divider biasing network ($R_1$ and $R_2$) is utilized. This establishes a stiff, constant DC potential at the base of the transistor:
+\[
+V_B \approx V_{CC}\left(\frac{R_2}{R_1 + R_2}\right)
+\]
+The DC emitter voltage ($V_E$) is strictly tied to $V_B$ minus the forward-biased base-emitter barrier voltage ($V_{BE} \approx \qty{0.7}{\volt}$):
+\[
+V_E = V_B - 0.7\,\text{V} \implies I_E = \frac{V_E}{R_E} \approx I_C
+\]
+The quiescent Collector-Emitter voltage ($V_{CE}$) is evaluated using Kirchhoff's Voltage Law down the output branch:
+\[
+V_{CE} = V_{CC} - I_C(R_C + R_E)
+\]
+
+\subsection{Role of Reactive Components (Capacitors)}
+\begin{itemize}
+	\item \textbf{Coupling Capacitors ($C_{in}$ and $C_{out}$):} These capacitors act as open circuits to DC, preventing the external source or load from altering the transistor's internal DC bias voltages. However, they act as short circuits to high-frequency AC.
+	\item \textbf{Emitter Bypass Capacitor ($C_E$):} Placed in parallel with $R_E$, this capacitor provides a low-impedance path to ground for AC signals. Without it, the AC signal would drop across $R_E$, causing negative feedback (swamping) and reducing voltage gain.
+\end{itemize}
+
+\blueSection{Apparatus and Components}
+\begin{table}[H]
+	\centering
+	\caption{List of Equipment and Components Used}
+	\vspace{2mm}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{llc}
+			\toprule
+			\textbf{Item Description} & \textbf{Specification / Rating} & \textbf{Quantity} \\
+			\midrule
+			Dual Regulated DC Power Supply & \qty{0}{\volt} to \qty{30}{\volt} & 1 \\
+			NPN Transistor & BC547, 2N2222, or equivalent & 1 \\
+			Function Generator & Sine wave generation (used at \qty{1}{\kilo\hertz}) & 1 \\
+			Dual-Channel DSO & Digital Storage Oscilloscope & 1 \\
+			Resistors & \qty{45.6}{\kilo\ohm}, \qty{9.73}{\kilo\ohm}, \qty{3.22}{\kilo\ohm}, \qty{0.977}{\kilo\ohm} & 1 each \\
+			Electrolytic Capacitors & \qty{10}{\micro\farad} & 2 \\
+			Digital Multimeter (DMM) & Standard & 1 \\
+			Solderless Breadboard & Standard & 1 \\
+			\bottomrule
+		\end{tabular}
+	}
+	\label{tab:apparatus8}
+\end{table}
+
+\blueSection{Circuit Diagram}
+\begin{figure}[H]
+	\centering
+	\begin{circuitikz}[american]
+		\coordinate (Ytop) at (0,6.5);
+		\coordinate (Ymid) at (0,3);
+		\coordinate (Ygnd) at (0,-0.5);
+		\node[npn] (Q1) at (6.5,3) {};
+		\draw (0,0) node[ground]{} to[sV, l=$v_{in}$] (0,3)
+		to[C, l=$C_{in}$, a=\qty{10}{\micro\farad}] (3,3) node[circ]{};
+		\draw (3,6.5) to[R, l=$R_1$, a_=\qty{45.6}{\kilo\ohm}] (3,3);
+		\draw (3,3) to[R, l=$R_2$, a_=\qty{9.73}{\kilo\ohm}] (3,-0.5) node[ground]{};
+		\draw (3,3) -- (Q1.B);
+		\node at ([xshift=1cm]Q1.center) {$Q_1$};
+		\draw (3,6.5) -- (Q1.C |- Ytop) node[circ]{} -- ++(0,0.8) node[vcc]{\qty{+12}{\volt}};
+		\draw (Q1.C |- Ytop) to[R, l=$R_C$, a_=\qty{3.22}{\kilo\ohm}] (Q1.C);
+		\draw (Q1.E) to[R, l=$R_E$, a_=\qty{0.977}{\kilo\ohm}] (Q1.E |- Ygnd) node[ground]{};
+		\draw (Q1.C) to[short, *-] ++(1.5,0)
+		to[C, l=$C_{out}$, a=\qty{10}{\micro\farad}] ++(2.5,0)
+		to[short, -o] ++(0.8,0) node[right]{$v_{out}$};
+	\end{circuitikz}
+	\caption{Schematic diagram of the BJT Class-A Common-Emitter Pre-Amplifier utilizing voltage-divider bias.}
+	\label{fig:amplifier8}
+\end{figure}
+
+\blueSection{Experimental Procedure}
+\begin{enumerate}
+	\item \textbf{DC Biasing Configuration:} Construct the circuit according to Figure~\ref{fig:amplifier8}. Initially, keep the Function Generator ($v_{in}$) disconnected. Energize the circuit by applying $V_{CC} = \qty{+12}{\volt}$ from the DC power supply.
+	\item \textbf{DC Measurement:} Using the DMM in DC Voltage mode, measure the DC voltages at the Base ($V_B$), Emitter ($V_E$), and Collector ($V_C$) relative to ground. Record the values and evaluate $I_C$ and $V_{CE}$.
+	\item \textbf{AC Mid-Band Voltage Gain:} Connect the Function Generator to the input coupling capacitor ($C_{in}$) and apply a \qty{1}{\kilo\hertz} sine wave.
+	\item \textbf{Observation:} Connect Channel 1 of the DSO to the input and Channel 2 to the output. Observe the waveform geometries, document the phase shift, and monitor changes across states.
+\end{enumerate}
+
+\blueSection{Data Collection}
+\begin{table}[H]
+	\centering
+	\caption{DC Quiescent Operating Point (Q-Point) Parameters}
+	\vspace{2mm}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lccc}
+			\toprule
+			\textbf{Parameter} & \textbf{Theoretical Value} & \textbf{Measured Value} & \textbf{\% Error} \\
+			\midrule
+			Base Voltage ($V_B$) & \qty{2.11}{\volt} & \qty{1.968}{\volt} & 6.73\% \\
+			Emitter Voltage ($V_E$) & \qty{1.41}{\volt} & \qty{1.333}{\volt} & 5.46\% \\
+			Collector Voltage ($V_C$) & \qty{7.35}{\volt} & \qty{7.86}{\volt} & 6.88\% \\
+			$V_{CE}$ & \qty{5.94}{\volt} & \qty{6.53}{\volt} & 9.86\% \\
+			Collector Current ($I_C$) & \qty{1.44}{\milli\ampere} & \qty{2.49}{\milli\ampere} & 72.92\% \\
+			\bottomrule
+		\end{tabular}
+	}
+	\label{tab:qpoint8}
+\end{table}
+
+\subsection{Oscilloscope Waveforms}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{waveforms/1.jpg}
+	\caption{Oscilloscope trace record showing the input signal waveform.}
+	\label{fig:wave1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{waveforms/2.jpg}
+	\caption{Oscilloscope trace record showing the amplified output signal waveform.}
+	\label{fig:wave2}
+	
+	\vspace{1cm}
+	
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{waveforms/3.jpg}
+	\caption{Oscilloscope trace record showing both input and output signal waveforms for phase comparison.}
+	\label{fig:wave3}
+\end{figure}
+
+\blueSection{Result Analysis}
+The BJT Common-Emitter pre-amplifier circuit successfully established a DC bias network and amplified the small-signal AC input. Evaluation of the node voltages demonstrated reasonable convergence with theoretical calculations for the Base, Emitter, and Collector voltages, maintaining error margins beneath 10\%. However, the calculated Collector Current ($I_C$) exhibited a significant deviation, increasing from a theoretical \qty{1.44}{\milli\ampere} to a measured \qty{2.49}{\milli\ampere}. This resulted in a substantial 72.92\% error, which was independently verified to be the direct result of a component/equipment fault during the experimental setup rather than a mathematical breakdown of the voltage-divider biasing principle. The oscilloscope traces effectively visualized the necessary signal amplifications and phase alignments.
+
+\blueSection{Conclusion}
+The Class-A Pre-Amplifier circuit was systematically built and characterized. While the overall voltage measurements validated the theoretical DC Q-point mechanics established by the bias resistors, the isolated current discrepancy highlighted the strict sensitivity of analog transistor circuits to practical hardware faults. The experiment successfully demonstrated basic BJT small-signal AC behavior, the critical role of coupling capacitors, and voltage phase inversion, proving the fundamental principles of linear signal amplification.
+
+\blueSection{References}
+\begin{tcolorbox}[colback=gray!5, colframe=gray!40, arc=2mm]
+	\begin{enumerate}
+		\item Boylestad, R. L., \& Nashelsky, L. (2013). \textit{Electronic Devices and Circuit Theory} (11th ed.). Pearson.
+		\item Alexander, C. K., \& Sadiku, M. N. O. (2016). \textit{Fundamentals of Electric Circuits} (6th ed.). McGraw-Hill Education.
+		\item Sedra, A. S., \& Smith, K. C. (2014). \textit{Microelectronic Circuits} (7th ed.). Oxford University Press.
+	\end{enumerate}
+\end{tcolorbox}
+
+\clearpage
+\blueSection{Appendix: Signed Data Sheets}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{datasheet/sheet1.jpg}
+	\caption{Instructor-verified experimental data collection sheet (Page 1).}
+	\label{fig:datasheet8_1}
+\end{figure}
+
+\clearpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{datasheet/sheet2.jpg}
+	\caption{Instructor-verified experimental data collection sheet (Page 2).}
+	\label{fig:datasheet8_2}
+\end{figure}

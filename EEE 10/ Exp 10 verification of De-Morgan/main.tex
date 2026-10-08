@@ -1,0 +1,49 @@
+\documentclass{setupFiles/script_eee_sust}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+
+\newcommand{\institutionName}{Shahjalal University of Science and Technology}
+\newcommand{\courseOfferingDept}{Department of Electrical and Electronic Engineering}
+\newcommand{\studentDept}{Department of Software Engineering}
+\newcommand{\courseTitle}{Basic Electrical and Electronic Circuit Lab}
+\newcommand{\courseCode}{EEE 0713 1102W}
+\newcommand{\experimentNumber}{10}
+\newcommand{\experimentName}{Verification of DeMorgan's Theorem using Logic Gate ICs}
+
+\newcommand{\studentName}{Raj Bhowmik Sany}
+\newcommand{\registrationNumber}{202561901048}
+\newcommand{\session}{2025}
+
+\newcommand{\studentSignature}{signature/your_signature.png}
+
+\newcommand{\courseInstructor}{Dr.\ Md Rasedujjaman}
+\newcommand{\designationOfInstructor}{Associate Professor}
+
+\newcommand{\submissionDate}{October 8, 2026}
+
+\begin{document}
+	
+	\input{TexFiles/titlePage.tex}
+	
+	\pagenumbering{roman}
+	
+	\input{TexFiles/declaration.tex}
+	
+	\tableofcontents
+	\newpage
+	
+	\phantomsection
+	\addcontentsline{toc}{section}{\listfigurename}
+	\listoffigures
+	\newpage
+	
+	\phantomsection
+	\addcontentsline{toc}{section}{\listtablename}
+	\listoftables
+	\newpage
+	
+	\pagenumbering{arabic}
+	\input{TexFiles/contents.tex}
+	
+\end{document}

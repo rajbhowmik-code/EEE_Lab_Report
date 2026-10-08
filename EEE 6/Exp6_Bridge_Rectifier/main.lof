@@ -1,4 +1,0 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces Full-wave bridge rectifier circuit driven by an AC source with parallel load $R_L$ and optional capacitor filter $C$.}}{3}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Sinusoidal AC input voltage trace ($V_m=\qty {6}{\volt }$, $f=\qty {50}{\hertz }$).}}{4}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Unfiltered full-wave rectified output voltage trace ($V_{mo}=\qty {2}{\volt }$, $f=\qty {100}{\hertz }$).}}{4}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Filtered DC output voltage trace demonstrating smoothed output waveform.}}{4}{figure.4}%

@@ -4,16 +4,16 @@
 \contentsline {section}{Objective}{1}{section*.3}%
 \contentsline {section}{Introduction}{1}{section*.3}%
 \contentsline {section}{Theory}{1}{section*.3}%
-\contentsline {subsection}{DC Power Supply}{1}{section*.4}%
 \contentsline {subsection}{Digital/Analog Trainer Board}{1}{section*.4}%
-\contentsline {subsection}{Analog Meters}{1}{section*.4}%
-\contentsline {subsection}{Multimeters}{2}{section*.4}%
-\contentsline {subsection}{Oscilloscope}{2}{section*.4}%
-\contentsline {subsection}{Function Generator}{2}{section*.4}%
-\contentsline {section}{Apparatus and Components}{2}{section*.4}%
-\contentsline {section}{Circuit Diagram}{2}{table.1}%
-\contentsline {section}{Experimental Procedure}{2}{figure.1}%
-\contentsline {section}{Observations}{3}{Item.5}%
-\contentsline {section}{Discussion}{4}{Item.5}%
-\contentsline {section}{Conclusion}{4}{Item.5}%
-\contentsline {section}{References}{4}{Item.5}%
+\contentsline {subsection}{DC Power Supply}{2}{figure.1}%
+\contentsline {subsection}{Function Generator}{2}{figure.2}%
+\contentsline {subsection}{Analog Meters}{2}{figure.3}%
+\contentsline {subsection}{Multimeters}{4}{figure.8}%
+\contentsline {subsection}{Oscilloscopes}{5}{figure.10}%
+\contentsline {section}{Apparatus and Components}{5}{figure.12}%
+\contentsline {section}{Circuit Diagram}{5}{table.1}%
+\contentsline {section}{Experimental Procedure}{6}{figure.13}%
+\contentsline {section}{Observations}{8}{Item.5}%
+\contentsline {section}{Discussion}{8}{Item.5}%
+\contentsline {section}{Conclusion}{8}{Item.5}%
+\contentsline {section}{References}{8}{Item.5}%

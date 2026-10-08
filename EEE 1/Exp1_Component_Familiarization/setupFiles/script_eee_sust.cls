@@ -13,6 +13,7 @@
 \RequirePackage{colortbl}
 \RequirePackage{mathptmx}
 \RequirePackage{titlesec}
+\RequirePackage{float}
 
 \definecolor{primaryColor}{RGB}{15, 60, 110}   
 \definecolor{accentColor}{RGB}{70, 90, 120}    

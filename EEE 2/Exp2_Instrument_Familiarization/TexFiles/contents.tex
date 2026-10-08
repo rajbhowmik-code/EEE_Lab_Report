@@ -13,23 +13,121 @@ Laboratory testing relies heavily on the correct and cautious operation of stand
 
 \section{Theory}
 
-\subsection{DC Power Supply}
-A benchtop DC supply transforms AC mains power into a steady, adjustable DC output. In Constant Voltage (CV) mode, the equipment keeps a fixed target voltage while output current adjusts according to load resistance. In Constant Current (CC) mode, output current is clamped to a set limit, dropping the voltage to enforce that threshold. To set a safe current limit, the current control is turned counter-clockwise, the terminal leads are temporarily shorted, and the current control is raised to the target limit before clearing the short. Dual-tracking supplies provide balanced positive and negative supply lines relative to a shared ground rail, which is essential for op-amp circuits.
-
 \subsection{Digital/Analog Trainer Board}
-A trainer board combines a central breadboard workspace with integrated modules: a fixed \qty{5}{\volt} DC rail for digital logic, variable supplies, toggle switches for digital input levels, LED indicators for output monitoring, and clock pulse generators for astable or monostable triggering. The primary power switch on the board should remain OFF whenever components are inserted or rewired.
+A trainer board combines a central breadboard workspace with integrated modules: fixed and variable DC rails, switches for logic inputs, LED indicators for output monitoring, and clock pulse generators.
 
-\subsection{Analog Meters}
-Most analog meters rely on Permanent Magnet Moving Coil (PMMC) movements, where current passing through a coil generates torque to deflect an indicator needle. A galvanometer is a high-sensitivity center-zero meter used to detect tiny current flows and directional changes, often for bridge balancing. An ammeter adds a low-resistance shunt in parallel with the coil, yielding minimal internal resistance; it must be wired in series with the load. A voltmeter pairs the coil with a high series resistor, resulting in high internal resistance so it draws negligible current when connected in parallel across a component. An ohmmeter utilizes an internal source to push current through an unpowered resistor and must be zero-adjusted prior to taking measurements.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.65\textwidth, keepaspectratio]{Trainer board.png}
+	\caption{Standard Laboratory Trainer Board}
+	\label{fig:trainer_board}
+\end{figure}
 
-\subsection{Multimeters}
-An analog multimeter (VOM) combines voltage, current, and resistance measurement functions into a single PMMC assembly using a rotary switch. Range selection must begin at the highest setting and work downward while observing correct DC polarity. A Digital Multimeter (DMM) replaces analog coils with solid-state analog-to-digital converters, eliminating parallax error while providing high input impedance (\qty{10}{\mega\ohm}+), auto-ranging, and diode test features. Current measurements require connecting the DMM in series using the dedicated current jack.
+\subsection{DC Power Supply}
+A benchtop DC supply transforms AC mains power into a steady, adjustable DC output. In Constant Voltage (CV) mode, the equipment keeps a fixed target voltage while output current adjusts according to load resistance. In Constant Current (CC) mode, output current is clamped to a set limit.
 
-\subsection{Oscilloscope}
-An oscilloscope plots voltage on the vertical (Y) axis against time on the horizontal (X) axis. Analog oscilloscopes sweep an electron beam across a phosphor CRT screen in real time. Digital Storage Oscilloscopes (DSOs) digitize the input signal through an ADC and save it in memory, enabling single-shot capture, automated signal measurements ($V_{pp}$, period, frequency), and math options like FFT. Achieving a stable display requires adjusting the trigger level to match the signal's edge. A 10X attenuation probe adds a \qty{9}{\mega\ohm} series resistance to minimize circuit loading and must be compensated against the scope's internal calibration signal. Selecting a slow horizontal sweep relative to signal frequency leads to aliasing error. The probe's ground clip connects directly to earth ground and must never be attached to a non-zero voltage point.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{DC Power Supply.png}
+	\caption{Regulated DC Power Supply}
+	\label{fig:dc_power_supply}
+\end{figure}
 
 \subsection{Function Generator}
-A function generator supplies standard periodic signals—sine, square, triangle, and ramp waves—with controllable frequency, amplitude, and DC offset. Benchtop generators are calibrated for a \qty{50}{\ohm} load; when attached directly to a High-Z (\qty{1}{\mega\ohm}) scope input, displayed amplitudes appear doubled unless the generator's output profile is updated to High-Z mode. A function generator acts as a low-power signal source and should not directly power heavy inductive loads.
+A function generator supplies standard periodic signals—sine, square, triangle, and ramp waves—with controllable frequency, amplitude, and DC offset. Benchtop generators are calibrated for a \qty{50}{\ohm} load.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.60\textwidth, keepaspectratio]{Function Generator.png}
+	\caption{Laboratory Function Generator}
+	\label{fig:function_generator}
+\end{figure}
+
+\subsection{Analog Meters}
+Most analog meters rely on Permanent Magnet Moving Coil (PMMC) movements, where current passing through a coil generates torque to deflect an indicator needle. 
+
+A voltmeter pairs the coil with a high series resistor, resulting in high internal resistance so it draws negligible current when connected in parallel across a component.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Analogue Voltmeter.png}
+	\caption{Analogue Voltmeter}
+	\label{fig:analogue_voltmeter}
+\end{figure}
+
+An ammeter adds a low-resistance shunt in parallel with the coil, yielding minimal internal resistance; it must be wired in series with the load.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Analogue Ammeter.png}
+	\caption{Analogue Ammeter}
+	\label{fig:analogue_ammeter}
+\end{figure}
+
+A galvanometer is a high-sensitivity center-zero meter used to detect tiny current flows and directional changes, often for bridge balancing.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Analogue Galvanometer.png}
+	\caption{Analogue Galvanometer}
+	\label{fig:analogue_galvanometer}
+\end{figure}
+
+An ohmmeter utilizes an internal source to push current through an unpowered resistor and must be zero-adjusted prior to taking measurements.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Analogue Ohmmeter.png}
+	\caption{Analogue Ohmmeter}
+	\label{fig:analogue_ohmmeter}
+\end{figure}
+
+An analogue frequency meter directly measures and displays the frequency of periodic AC electrical signals.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Analogue Frequency meter.png}
+	\caption{Analogue Frequency Meter}
+	\label{fig:analogue_frequency_meter}
+\end{figure}
+
+\subsection{Multimeters}
+An analog multimeter (VOM) combines voltage, current, and resistance measurement functions into a single PMMC assembly using a rotary switch. Range selection must begin at the highest setting and work downward while observing correct DC polarity.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Analogue Multimeter.png}
+	\caption{Analogue Multimeter (VOM)}
+	\label{fig:analogue_multimeter}
+\end{figure}
+
+A Digital Multimeter (DMM) replaces analog coils with solid-state analog-to-digital converters, eliminating parallax error while providing high input impedance (\qty{10}{\mega\ohm}+), auto-ranging, and diode test features.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.50\textwidth, keepaspectratio]{Digital Multimeter.png}
+	\caption{Digital Multimeter (DMM)}
+	\label{fig:digital_multimeter}
+\end{figure}
+
+\subsection{Oscilloscopes}
+An oscilloscope plots voltage on the vertical (Y) axis against time on the horizontal (X) axis. Analog oscilloscopes sweep an electron beam across a phosphor CRT screen in real time.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.65\textwidth, keepaspectratio]{Analogue Oscilloscope.png}
+	\caption{Analogue Cathode Ray Oscilloscope}
+	\label{fig:analogue_oscilloscope}
+\end{figure}
+
+Digital Storage Oscilloscopes (DSOs) digitize the input signal through an ADC and save it in memory, enabling single-shot capture, automated signal measurements ($V_{pp}$, period, frequency), and math options.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.65\textwidth, keepaspectratio]{Digital Storage Oscilloscope.png}
+	\caption{Digital Storage Oscilloscope (DSO)}
+	\label{fig:dso}
+\end{figure}
 
 \section{Apparatus and Components}
 \begin{table}[h!]
@@ -41,12 +139,18 @@ A function generator supplies standard periodic signals—sine, square, triangle
 		\rowcolor{blue!10}
 		\textbf{Item Description} & \textbf{Specification / Rating} & \textbf{Quantity} \\
 		\midrule
-		DC Power Supply & \qty{0}{\volt}--\qty{30}{\volt}, dual output & 1 \\
 		Digital/Analog Trainer Board & Built-in \qty{5}{\volt} supply, logic switches, LEDs & 1 \\
+		DC Power Supply & \qty{0}{\volt}--\qty{30}{\volt}, dual output & 1 \\
+		Function Generator & Sine/Square/Triangular, \qty{0}{\hertz}--\qty{1}{\mega\hertz} & 1 \\
+		Analog Voltmeter & Benchtop voltage meter & 1 \\
+		Analog Ammeter & Benchtop current meter & 1 \\
+		Analog Galvanometer & Center-zero high sensitivity & 1 \\
+		Analog Ohmmeter & Benchtop resistance meter & 1 \\
+		Analog Frequency Meter & Panel frequency meter & 1 \\
 		Analog Multimeter (VOM) & Rotary range selector & 1 \\
 		Digital Multimeter (DMM) & Auto-ranging & 1 \\
-		Analog Oscilloscope / DSO & Dual channel & 1 \\
-		Function Generator & Sine/Square/Triangular, \qty{0}{\hertz}--\qty{1}{\mega\hertz} & 1 \\
+		Analog Oscilloscope & Dual channel CRT & 1 \\
+		Digital Storage Oscilloscope (DSO) & Dual channel LCD & 1 \\
 		Fixed Resistor (Test Load) & \qty{1.0}{\kilo\ohm}, \qty{0.25}{\watt} & 1 \\
 		Solderless Breadboard & Standard Tie-Point & 1 \\
 		Connecting Wires \& BNC Probes & Jumper wires, oscilloscope probes & As required \\

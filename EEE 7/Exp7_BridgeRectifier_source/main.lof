@@ -1,0 +1,8 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Full-wave bridge rectifier schematic depicting source connection, four-diode bridge layout, load resistor $R_L$, and parallel smoothing capacitor $C$.}}{3}{figure.18}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Sinusoidal input waveform supplied by function generator ($V_m=\qty {6}{\volt }$, $f=\qty {50}{\hertz }$).}}{4}{figure.32}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Oscilloscope trace record showing input AC waveform.}}{4}{figure.34}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Unfiltered full-wave rectified output showing periodic pulse frequency doubling ($V_{mo}=\qty {2}{\volt }$).}}{5}{figure.36}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Oscilloscope trace record of unfiltered full-wave output.}}{5}{figure.38}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Filtered output profile illustrating smoothing effect around steady DC level ($V_{DC}=\qty {1.78}{\volt }$).}}{5}{figure.40}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Oscilloscope trace record showing capacitor-filtered output.}}{6}{figure.42}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Instructor-verified experimental data collection sheet.}}{7}{figure.51}%

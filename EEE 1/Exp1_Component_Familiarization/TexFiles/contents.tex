@@ -17,6 +17,20 @@ Proper component verification—such as decoding color bands on axial resistors 
 \subsection{Resistors}
 Resistors introduce specific opposition to current flow according to Ohm's Law, $V = IR$. Standard axial resistors mark nominal resistance and manufacturing tolerance using color bands. Four-band resistors are read sequentially: bands one and two represent significant digits, band three provides the multiplier ($10^{n}$), and band four indicates tolerance.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth, keepaspectratio]{Resistors.png}
+	\caption{Overview of Standard Fixed Resistors}
+	\label{fig:resistors_overview}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{Bands resistor reading system.png}
+	\caption{Resistor Color Band Reading System}
+	\label{fig:resistor_bands}
+\end{figure}
+
 \begin{table}[h!]
 	\centering
 	\caption{Standard Resistor Color Code Reference}
@@ -45,8 +59,71 @@ Resistors introduce specific opposition to current flow according to Ohm's Law, 
 
 Common fixed-resistor variants include carbon film, metal film (high precision and low temperature drift), wirewound (suited for high power), and surface-mount devices. Variable resistors (potentiometers) permit manual resistance adjustments using a movable internal wiper.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Metal Film Resistor.png}
+	\caption{Metal Film Resistor}
+	\label{fig:metal_film_resistor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Wirewound resistor.png}
+	\caption{Standard Wirewound Resistor}
+	\label{fig:wirewound_resistor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Wirewound-Power-Resistor2.png}
+	\caption{High-Power Wirewound Resistor}
+	\label{fig:power_resistor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Surface Mount Resistor.png}
+	\caption{Surface Mount Device (SMD) Resistor}
+	\label{fig:smd_resistor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Variable Resistor.png}
+	\caption{Variable Resistor (Potentiometer)}
+	\label{fig:variable_resistor}
+\end{figure}
+
 \subsection{Capacitors}
 Capacitors store electrical charge within an electric field generated across dielectric-separated conductive plates. Ceramic capacitors offer non-polarized, compact construction suited for high-frequency decoupling. Electrolytic capacitors provide higher capacitance values within a polarized container, making them ideal for DC smoothing filters. Mylar and tantalum capacitors provide stable operation in precision and high-density layouts.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.65\textwidth, keepaspectratio]{Capacitors.png}
+	\caption{Assorted Capacitor Classification}
+	\label{fig:capacitors_overview}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Ceramic capacitors.png}
+	\caption{Ceramic Disc Capacitors}
+	\label{fig:ceramic_capacitors}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Electrolytic Capacitor.png}
+	\caption{Polarized Electrolytic Capacitor}
+	\label{fig:electrolytic_capacitor}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Film Capacitor.png}
+	\caption{Film Capacitor}
+	\label{fig:film_capacitor}
+\end{figure}
 
 \subsection{Inductors}
 Inductors store energy inside a magnetic field established by current flowing through a wound coil. Voltage induced across an inductor follows
@@ -58,11 +135,25 @@ where $L$ denotes inductance in Henrys. Magnetic core selection (air, iron, or f
 \subsection{Diodes}
 A semiconductor diode permits unidirectional current flow. Silicon P-N junction diodes exhibit a forward bias voltage drop around \qty{0.7}{\volt}. Zener diodes function safely within reverse breakdown to maintain steady reference voltages. Light Emitting Diodes (LEDs) emit light under forward bias and require series current-limiting resistors to protect against overcurrent destruction.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth, keepaspectratio]{LED.png}
+	\caption{Light Emitting Diode (LED) Structure and Pinout}
+	\label{fig:led_structure}
+\end{figure}
+
 \subsection{Transistors}
 Transistors operate as active control devices for signal amplification and switching. Bipolar Junction Transistors (BJTs) use small base current inputs to regulate larger collector-emitter currents ($I_C = \beta I_B$). Field-Effect Transistors (MOSFETs) provide voltage-controlled switching with near-zero gate current draw.
 
 \subsection{Digital Logic Gate ICs}
 Digital logic circuits process binary signals represented by discrete voltage bands (Logic 1 $\approx$ \qty{5}{\volt}, Logic 0 $\approx$ \qty{0}{\volt}). Standard 7400-series TTL ICs house multiple logic gates within integrated dual in-line packages.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.55\textwidth, keepaspectratio]{Dual-in-line-package-DIP.png}
+	\caption{Dual In-Line Package (DIP) IC Outline}
+	\label{fig:dip_package}
+\end{figure}
 
 \begin{table}[h!]
 	\centering
@@ -87,6 +178,13 @@ Digital logic circuits process binary signals represented by discrete voltage ba
 
 \subsection{Breadboard}
 Solderless breadboards facilitate temporary circuit assembly. Outer power rails supply common supply voltages and ground, while interior five-hole terminal strips host component connections. A central divider trench splits opposing sides to mount Dual In-line Package (DIP) ICs securely.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth, keepaspectratio]{Breadboard.png}
+	\caption{Solderless Breadboard Internal Connection Tracks}
+	\label{fig:breadboard_layout}
+\end{figure}
 
 \section{Apparatus and Components}
 \begin{table}[h!]

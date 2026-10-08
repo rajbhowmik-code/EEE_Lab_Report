@@ -1,0 +1,19 @@
+\contentsline {section}{Declaration}{i}{section*.1}%
+\contentsline {section}{List of Figures}{iii}{section*.3}%
+\contentsline {section}{List of Tables}{iv}{section*.5}%
+\contentsline {section}{Objective}{1}{section*.7}%
+\contentsline {section}{Introduction}{1}{section*.8}%
+\contentsline {section}{Theory}{1}{section*.9}%
+\contentsline {subsection}{Cycle-by-Cycle Conduction Analysis}{1}{section*.10}%
+\contentsline {subsection}{Mathematical Formulation of Rectifier Parameters}{2}{section*.11}%
+\contentsline {subsection}{Effect of a Capacitive Filter}{2}{section*.12}%
+\contentsline {section}{Apparatus and Components}{2}{section*.13}%
+\contentsline {section}{Circuit Diagram}{2}{section*.16}%
+\contentsline {section}{Experimental Procedure}{3}{section*.19}%
+\contentsline {section}{Theoretical Calculation}{3}{section*.24}%
+\contentsline {section}{Data Collection}{4}{section*.25}%
+\contentsline {subsection}{Oscilloscope Waveforms}{4}{section*.30}%
+\contentsline {section}{Result Analysis}{6}{section*.43}%
+\contentsline {section}{Conclusion}{6}{section*.44}%
+\contentsline {section}{References}{6}{section*.45}%
+\contentsline {section}{Appendix: Signed Data Sheet}{7}{section*.49}%

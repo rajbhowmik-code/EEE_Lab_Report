@@ -5,16 +5,16 @@
 \contentsline {section}{Introduction}{1}{section*.3}%
 \contentsline {section}{Theory}{1}{section*.3}%
 \contentsline {subsection}{Resistors}{1}{section*.4}%
-\contentsline {subsection}{Capacitors}{2}{table.1}%
-\contentsline {subsection}{Inductors}{2}{table.1}%
-\contentsline {subsection}{Diodes}{2}{table.1}%
-\contentsline {subsection}{Transistors}{2}{table.1}%
-\contentsline {subsection}{Digital Logic Gate ICs}{2}{table.1}%
-\contentsline {subsection}{Breadboard}{2}{table.2}%
-\contentsline {section}{Apparatus and Components}{3}{table.2}%
-\contentsline {section}{Circuit Diagram}{3}{table.3}%
-\contentsline {section}{Experimental Procedure}{3}{figure.1}%
-\contentsline {section}{Observations}{4}{Item.4}%
-\contentsline {section}{Discussion}{4}{table.4}%
-\contentsline {section}{Conclusion}{4}{table.4}%
-\contentsline {section}{References}{4}{table.4}%
+\contentsline {subsection}{Capacitors}{4}{figure.7}%
+\contentsline {subsection}{Inductors}{5}{figure.11}%
+\contentsline {subsection}{Diodes}{5}{figure.11}%
+\contentsline {subsection}{Transistors}{6}{figure.12}%
+\contentsline {subsection}{Digital Logic Gate ICs}{6}{figure.12}%
+\contentsline {subsection}{Breadboard}{7}{table.2}%
+\contentsline {section}{Apparatus and Components}{7}{figure.14}%
+\contentsline {section}{Circuit Diagram}{7}{table.3}%
+\contentsline {section}{Experimental Procedure}{7}{figure.15}%
+\contentsline {section}{Observations}{8}{Item.4}%
+\contentsline {section}{Discussion}{8}{table.4}%
+\contentsline {section}{Conclusion}{9}{table.4}%
+\contentsline {section}{References}{9}{table.4}%

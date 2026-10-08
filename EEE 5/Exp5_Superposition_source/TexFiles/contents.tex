@@ -1,0 +1,235 @@
+
+
+\section{Objective}
+\begin{itemize}
+    \item To understand the principle of the Superposition Theorem and its application in linear, bilateral DC resistive networks containing more than one independent source.
+    \item To experimentally verify that the total branch current in a multi-source linear circuit equals the algebraic sum of the individual branch currents produced by each independent source acting alone.
+    \item To compare the measured branch currents against theoretical calculations and evaluate the percentage error.
+\end{itemize}
+
+\section{Introduction}
+Many practical DC circuits are driven by more than one independent source at once, and analyzing them directly can get complicated fast. The \textbf{Superposition Theorem} gives a way around that: instead of solving the whole multi-source circuit in one go, it lets us analyze the effect of each source on its own -- with all the other independent sources turned off -- and then add the individual results back together to get the total response. This experiment builds a two-source resistive network, measures a branch current with both sources active and with each source active alone, and checks that the superposition relationship holds.
+
+\section{Theory}
+
+\subsection{Statement of the Theorem}
+\begin{quote}
+    \textit{In any linear, bilateral electrical network containing more than one independent source, the current through or voltage across any branch is equal to the algebraic sum of the currents or voltages produced by each independent source acting individually, while all other independent sources are deactivated (replaced by their internal impedances).}
+\end{quote}
+
+\subsection{Deactivation of Independent Sources}
+\begin{itemize}
+    \item \textbf{Ideal Voltage Sources} are deactivated by setting their voltage to zero, i.e. replacing them with a \textbf{short circuit}.
+    \item \textbf{Ideal Current Sources} are deactivated by setting their current to zero, i.e. replacing them with an \textbf{open circuit}.
+\end{itemize}
+
+\subsection{Mathematical Formulation}
+For a branch carrying current $I$ in a circuit driven by two independent voltage sources $V_1$ and $V_2$,
+\[
+I = I' + I''
+\]
+where $I'$ is the branch current when only $V_1$ is active ($V_2$ short-circuited), and $I''$ is the branch current when only $V_2$ is active ($V_1$ short-circuited).
+
+\subsection{Non-Applicability to Power Calculations}
+One thing to be careful about is that superposition does \textbf{not} work for power. Power depends on current (or voltage) squared, $P = I^2 R$, and squaring is a non-linear operation, so you can't just add up the individual powers from each source:
+\[
+P_{\text{total}} \neq P_1 + P_2.
+\]
+The right way to do it is to find the total current or voltage first using superposition, and only then plug that into the power formula.
+
+\section{Apparatus and Components}
+\begin{table}[h!]
+    \centering
+    \caption{List of Equipment and Components Used}
+    \vspace{2mm}
+    \begin{tabular}{llc}
+        \toprule
+        \textbf{Item Description} & \textbf{Specification / Rating} & \textbf{Quantity} \\
+        \midrule
+        Dual-Channel DC Power Supply & RPS1, RPS2 (\qty{0}{\volt}--\qty{30}{\volt}) & 1 \\
+        Resistor $R_1$ & \qty{325}{\ohm} & 1 \\
+        Resistor $R_2$ & \qty{550}{\ohm} & 1 \\
+        Resistor $R_3$ & \qty{960}{\ohm} & 1 \\
+        Digital Multimeter (DMM) & DC Volts / DC Amps & 1 \\
+        Solderless Breadboard & Standard Tie-Point & 1 \\
+        Connecting Wires & Jumper Wires & As required \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:apparatus5}
+\end{table}
+
+\section{Circuit Diagrams}
+
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz}[american, scale=1.0]
+        \draw (0,0) to[V, l=$V_1$, invert] (0,3)
+              (0,3) to[R, l=$R_1\,(\qty{325}{\ohm})$, i=$I_{R_1}$] (4,3)
+              to[R, l=$R_2\,(\qty{550}{\ohm})$, i=$I_{R_2}$] (8,3)
+              to[V, l=$V_2$] (8,0) -- (0,0);
+        \draw (4,3) to[R, l=$R_3\,(\qty{960}{\ohm})$, i=$I_{R_3}$] (4,0);
+        \draw (4,0) node[ground]{};
+        \node at (4,3.3) [above right] {$V_A$};
+    \end{circuitikz}
+    \caption{Complete DC network with both independent voltage sources $V_1$ and $V_2$ active. The branch current $I_{R_3}$ is the response under test.}
+    \label{fig:supcircuit1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz}[american, scale=1.0]
+        \draw (0,0) to[V, l=$V_1$, invert] (0,3)
+              (0,3) to[R, l=$R_1$, i=$I_{R_1}'$] (4,3)
+              to[R, l=$R_2$, i=$I_{R_2}'$] (8,3) -- (8,0) -- (0,0);
+        \draw (4,3) to[R, l=$R_3$, i=$I_{R_3}'$] (4,0);
+        \draw (4,0) node[ground]{};
+        \node at (8,1.5) [right] {\textbf{Short Circuit}};
+    \end{circuitikz}
+    \caption{Modified circuit with $V_1$ active and $V_2$ replaced by a short circuit, giving the isolated contribution $I_{R_3}'$.}
+    \label{fig:supcircuit2}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz}[american, scale=1.0]
+        \draw (0,0) -- (0,3)
+              (0,3) to[R, l=$R_1$, i=$I_{R_1}''$] (4,3)
+              to[R, l=$R_2$, i=$I_{R_2}''$] (8,3)
+              to[V, l=$V_2$] (8,0) -- (0,0);
+        \draw (4,3) to[R, l=$R_3$, i=$I_{R_3}''$] (4,0);
+        \draw (4,0) node[ground]{};
+        \node at (0,1.5) [left] {\textbf{Short Circuit}};
+    \end{circuitikz}
+    \caption{Modified circuit with $V_2$ active and $V_1$ replaced by a short circuit, giving the isolated contribution $I_{R_3}''$.}
+    \label{fig:supcircuit3}
+\end{figure}
+
+\section{Experimental Procedure}
+\begin{enumerate}
+    \item Build the circuit shown in Figure~\ref{fig:supcircuit1} on the breadboard, using $R_1=\qty{325}{\ohm}$, $R_2=\qty{550}{\ohm}$, and $R_3=\qty{960}{\ohm}$.
+    \item Turn on both RPS1 ($V_1$) and RPS2 ($V_2$), set them to the first trial voltage combination, and measure the total branch current $I_{R_3}$ flowing through $R_3$.
+    \item Switch off RPS2 and put a short-circuit wire in its place (Figure~\ref{fig:supcircuit2}), leaving RPS1 on. Measure the isolated contribution $I_{R_3}'$.
+    \item Turn RPS2 back on and instead short RPS1 (Figure~\ref{fig:supcircuit3}). Measure the isolated contribution $I_{R_3}''$.
+    \item Check that $I_{R_3} = I_{R_3}' + I_{R_3}''$ holds, then repeat Steps 2--4 for a second combination of source voltages.
+\end{enumerate}
+
+\section{Theoretical Calculations}
+With $R_3$ removed as the branch of interest and $R_1=\qty{325}{\ohm}$, $R_2=\qty{550}{\ohm}$, $R_3=\qty{960}{\ohm}$ fixed for both trials:
+
+\subsection*{Case 1: Only $V_1$ Active ($V_2$ Short-Circuited)}
+With $V_2$ shorted, $R_2$ and $R_3$ appear in parallel from node A to ground:
+\[
+R_{23} = \frac{R_2 R_3}{R_2+R_3} = \frac{550\times960}{550+960} = \qty{349.67}{\ohm}, \qquad
+R_{\text{eq1}} = R_1+R_{23} = 325+349.67 = \qty{674.67}{\ohm}.
+\]
+The total current leaving $V_1$ is $I_{\text{total}}' = V_1/R_{\text{eq1}}$, giving node voltage $V_A' = I_{\text{total}}' \times R_{23}$, and hence
+\[
+I_{R_3}' = \frac{V_A'}{R_3}.
+\]
+
+\subsection*{Case 2: Only $V_2$ Active ($V_1$ Short-Circuited)}
+With $V_1$ shorted, $R_1$ and $R_3$ appear in parallel from node A to ground:
+\[
+R_{13} = \frac{R_1 R_3}{R_1+R_3} = \frac{325\times960}{325+960} = \qty{242.80}{\ohm}, \qquad
+R_{\text{eq2}} = R_2+R_{13} = 550+242.80 = \qty{792.80}{\ohm}.
+\]
+The total current leaving $V_2$ is $I_{\text{total}}'' = V_2/R_{\text{eq2}}$, giving node voltage $V_A'' = I_{\text{total}}'' \times R_{13}$, and hence
+\[
+I_{R_3}'' = \frac{V_A''}{R_3}.
+\]
+
+\subsection*{Applied to Trial 1 ($V_1=\qty{10}{\volt}$, $V_2=\qty{10}{\volt}$)}
+\[
+I_{R_3}' = \frac{10/674.67 \times 349.67}{960} = \qty{5.39}{\milli\ampere}, \qquad
+I_{R_3}'' = \frac{10/792.80 \times 242.80}{960} = \qty{3.19}{\milli\ampere},
+\]
+\[
+I_{R_3} = I_{R_3}' + I_{R_3}'' = 5.39+3.19 = \qty{8.58}{\milli\ampere} \approx \qty{8.59}{\milli\ampere}.
+\]
+
+\subsection*{Applied to Trial 2 ($V_1=\qty{15}{\volt}$, $V_2=\qty{10}{\volt}$)}
+Since $V_2$ is unchanged, $I_{R_3}''$ is the same as in Trial 1 ($\qty{3.19}{\milli\ampere}$), while $I_{R_3}'$ scales with $V_1$:
+\[
+I_{R_3}' = \frac{15/674.67 \times 349.67}{960} = \qty{8.09}{\milli\ampere},
+\]
+\[
+I_{R_3} = I_{R_3}' + I_{R_3}'' = 8.09+3.19 = \qty{11.28}{\milli\ampere} \approx \qty{11.29}{\milli\ampere}.
+\]
+Both results match the calculated values reported in Table~\ref{tab:supdata1} and Table~\ref{tab:supdata2}, confirming the theoretical circuit model.
+
+\section{Data Collection}
+
+\begin{table}[h!]
+    \centering
+    \caption{Experimental Data for the Verification of Superposition Theorem -- Trial 1 ($V_1=\qty{10}{\volt}$, $V_2=\qty{10}{\volt}$ nominal)}
+    \vspace{2mm}
+    \begin{tabular}{lcccc}
+        \toprule
+        \textbf{Configuration} & \textbf{$V_1$ (V)} & \textbf{$V_2$ (V)} & \textbf{Measured $I_{R_3}$ (mA)} & \textbf{Calculated $I_{R_3}$ (mA)} \\
+        \midrule
+        Both Sources Active & 10 & 10 & 8.61 & 8.59 \\
+        Only $V_1$ Active & 10 & 0 & 5.36 & 5.39 \\
+        Only $V_2$ Active & 0 & 10 & 3.21 & 3.19 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:supdata1}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \caption{Experimental Data for the Verification of Superposition Theorem -- Trial 2 ($V_1=\qty{15}{\volt}$, $V_2=\qty{10}{\volt}$ nominal)}
+    \vspace{2mm}
+    \begin{tabular}{lcccc}
+        \toprule
+        \textbf{Configuration} & \textbf{$V_1$ (V)} & \textbf{$V_2$ (V)} & \textbf{Measured $I_{R_3}$ (mA)} & \textbf{Calculated $I_{R_3}$ (mA)} \\
+        \midrule
+        Both Sources Active & 15 & 10 & 11.3 & 11.29 \\
+        Only $V_1$ Active & 15 & 0 & 8.11 & 8.09 \\
+        Only $V_2$ Active & 0 & 10 & 3.2 & 3.19 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:supdata2}
+\end{table}
+
+\textit{Note: Data transcribed from the instructor-reviewed handwritten laboratory data sheet (Group~04).}
+
+\section{Result Analysis}
+Adding up the two individually-measured branch currents from each trial gives a value that lines up well with what was measured when both sources were on at the same time:
+\begin{itemize}
+    \item \textbf{Trial 1}: $I_{R_3}' + I_{R_3}'' = \qty{5.36}{\milli\ampere} + \qty{3.21}{\milli\ampere} = \qty{8.57}{\milli\ampere}$ (Measured total = \qty{8.61}{\milli\ampere}).
+    \item \textbf{Trial 2}: $I_{R_3}' + I_{R_3}'' = \qty{8.11}{\milli\ampere} + \qty{3.2}{\milli\ampere} = \qty{11.31}{\milli\ampere}$ (Measured total = \qty{11.3}{\milli\ampere}).
+\end{itemize}
+To check this more rigorously, the measured "Both Active" current can be compared against the theoretical value using
+\[
+\text{\% Error} = \left|\frac{\text{Theoretical}-\text{Measured}}{\text{Theoretical}}\right|\times100\%,
+\]
+which gives about $0.23\%$ for Trial~1 ($|8.59-8.61|/8.59\times100\%$) and about $0.09\%$ for Trial~2 ($|11.29-11.3|/11.29\times100\%$). Both numbers are small, so the Superposition Theorem holds up well in both trials.
+
+\section{Discussion and Sources of Error}
+None of the percentage errors we calculated went above $0.25\%$, so overall the results back up the theory very well. Still, a few things in the real setup keep it from matching the ideal calculations exactly:
+\begin{enumerate}
+    \item \textbf{Resistor Tolerance:} $R_1$, $R_2$, and $R_3$ are not exactly their labeled values -- every resistor is only guaranteed to within a manufacturer tolerance -- so there's already a small gap between what the theory assumes and what's actually in the circuit.
+    \item \textbf{Power Supply Regulation:} The DC supply output can shift slightly once it's under load, and the short-circuit substitution used to deactivate a source is never perfectly ideal (a real wire still has some resistance), both of which add a bit of error into the trials.
+    \item \textbf{Multimeter Loading:} An ammeter isn't a true zero-resistance short -- it has some small burden resistance -- so just connecting the meter changes the circuit slightly from what's assumed in the calculations.
+\end{enumerate}
+
+\section{Conclusion}
+This experiment confirmed that the Superposition Theorem holds for a linear, multi-source DC network. Adding together the branch currents measured with each source acting alone gave a total that was very close to what was measured with both sources on together, in both of the two trials, with percentage errors under $0.25\%$. This confirms that superposition is a valid way to break a multi-source circuit down into simpler single-source problems, as long as you remember it only works for currents and voltages and not directly for power.
+
+\section{References}
+\begin{tcolorbox}[colback=gray!5, colframe=gray!40, arc=2mm]
+\begin{enumerate}
+    \item Alexander, C. K., \& Sadiku, M. N. O. (2016). \textit{Fundamentals of Electric Circuits} (6th ed.). McGraw-Hill Education. (Chapter 4: Circuit Theorems).
+    \item Hayt, W. H., Kemmerly, J. E., \& Durbin, S. M. (2012). \textit{Engineering Circuit Analysis} (8th ed.). McGraw-Hill Education. (Chapter 5: Useful Circuit Analysis Techniques).
+    \item Boylestad, R. L. (2015). \textit{Introductory Circuit Analysis} (13th ed.). Pearson. (Chapter 9: Network Theorems).
+\end{enumerate}
+\end{tcolorbox}
+
+\clearpage
+\section{Appendix: Signed Data Sheet}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\textwidth, keepaspectratio]{datasheet/exp5_datasheet}
+    \caption{Instructor-signed laboratory data sheet for this experiment.}
+    \label{fig:datasheet5}
+\end{figure}

@@ -1,0 +1,152 @@
+\newcommand{\blueSection}[1]{%
+	\vspace{0.5cm}
+	\phantomsection
+	\addcontentsline{toc}{section}{#1}
+	{\Large \bfseries \color{blue!80!black} #1}
+	\vspace{2mm}
+	{\color{blue!80!black}\hrule height 1pt}
+	\vspace{0.3cm}
+}
+
+\blueSection{Objective}
+\begin{itemize}
+	\item To understand the working principle of Bipolar Junction Transistors (BJT) operating in switching modes (cutoff and saturation).
+	\item To design and implement fundamental digital logic gates (AND, OR, NOT) using Resistor-Transistor Logic (RTL) configurations.
+	\item To experimentally verify the truth tables of these logic gates by measuring input and output voltage levels.
+\end{itemize}
+
+\blueSection{Theory}
+
+\subsection{The BJT as a Switch}
+In digital electronics, Bipolar Junction Transistors (BJTs) are utilized as solid-state switches by driving them between two extreme regions: cutoff ($I_C \approx 0$, acting as an open switch) and saturation ($V_{CE(sat)} \approx 0.2\,\text{V}$, acting as a closed switch).
+
+\subsection{Resistor-Transistor Logic (RTL)}
+Resistor-Transistor Logic (RTL) builds digital circuits using resistors as the input network and bipolar junction transistors as switching elements.
+
+\subsection{Logic Gate Configurations}
+\begin{itemize}
+	\item \textbf{AND Gate:} Formed by connecting two NPN transistors in series. Both must saturate simultaneously to drive the output high.
+	\item \textbf{OR Gate:} Formed by connecting two NPN transistors in parallel. If either or both receive a high input, they conduct and drive the output high.
+	\item \textbf{NOT Gate (Inverter):} Utilizes a single BJT in a common-emitter configuration. When the input is high, the transistor saturates, pulling the output low; when the input is low, the transistor cuts off, pulling the output high via the collector resistor.
+\end{itemize}
+
+\blueSection{Apparatus and Components}
+\begin{table}[H]
+	\centering
+	\caption{List of Equipment and Components Used}
+	\vspace{2mm}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{llc}
+			\toprule
+			\textbf{Item Description} & \textbf{Specification / Rating} & \textbf{Quantity} \\
+			\midrule
+			DC Regulated Power Supply & 5V or 6V & 1 \\
+			Digital Multimeter (DMM) & Standard & 1 \\
+			Solderless Breadboard & Standard Tie-Point & 1 \\
+			NPN Transistors & BC547 or 2N2222 & As required \\
+			Resistors & \qty{1}{\kilo\ohm}, \qty{4.7}{\kilo\ohm}, \qty{10}{\kilo\ohm}, \qty{220}{\ohm}, \qty{330}{\ohm} & Various \\
+			Push Buttons / Switches & DIP switches or push buttons & As required \\
+			Connecting Wires & Jumper Wires & As required \\
+			\bottomrule
+		\end{tabular}%
+	}
+	\label{tab:apparatus9}
+\end{table}
+
+\blueSection{Experimental Procedure}
+\begin{enumerate}
+	\item Construct the AND gate circuit using series NPN transistors, connect power, and apply inputs sequentially to record output voltages.
+	\item Construct the OR gate circuit using parallel NPN transistors, apply input combinations, and measure the output response.
+	\item Construct the NOT gate inverter circuit, apply high and low input states, and measure output voltage levels.
+\end{enumerate}
+
+\blueSection{Data Collection}
+\label{sec:datacollection9}
+
+\begin{table}[H]
+	\centering
+	\caption{AND Gate Truth Table and Measurements}
+	\vspace{2mm}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{cccc}
+			\toprule
+			\textbf{Input A (V)} & \textbf{Input B (V)} & \textbf{Measured Output (V)} & \textbf{Logical Output State} \\
+			\midrule
+			0V (Logic 0) & 0V (Logic 0) & \qty{1.15}{\volt} & 0 (OFF) \\
+			0V (Logic 0) & 5V (Logic 1) & \qty{1.80}{\volt} & 0 (OFF) \\
+			5V (Logic 1) & 0V (Logic 0) & \qty{1.20}{\volt} & 0 (OFF) \\
+			5V (Logic 1) & 5V (Logic 1) & \qty{5.34}{\volt} & 1 (ON) \\
+			\bottomrule
+		\end{tabular}%
+	}
+	\label{tab:andgate9}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{OR Gate Truth Table and Measurements}
+	\vspace{2mm}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{cccc}
+			\toprule
+			\textbf{Input A (V)} & \textbf{Input B (V)} & \textbf{Measured Output (V)} & \textbf{Logical Output State} \\
+			\midrule
+			0V (Logic 0) & 0V (Logic 0) & \qty{0.001}{\volt} & 0 (OFF) \\
+			0V (Logic 0) & 5V (Logic 1) & \qty{4.43}{\volt} & 1 (ON) \\
+			5V (Logic 1) & 0V (Logic 0) & \qty{4.38}{\volt} & 1 (ON) \\
+			5V (Logic 1) & 5V (Logic 1) & \qty{4.42}{\volt} & 1 (ON) \\
+			\bottomrule
+		\end{tabular}%
+	}
+	\label{tab:orgate9}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{NOT Gate Truth Table and Measurements}
+	\vspace{2mm}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{ccc}
+			\toprule
+			\textbf{Input A (V)} & \textbf{Measured Output (V)} & \textbf{Logical Output State} \\
+			\midrule
+			0V (Logic 0) & \qty{5.12}{\volt} & 1 (ON) \\
+			5V (Logic 1) & \qty{0.016}{\volt} & 0 (OFF) \\
+			\bottomrule
+		\end{tabular}%
+	}
+	\label{tab:notgate9}
+\end{table}
+
+\blueSection{Result Analysis}
+\label{sec:resultanalysis9}
+The experimental measurements successfully validated the logical truth tables for the fundamental RTL AND, OR, and NOT gate configurations. For the AND gate, a high logical output was observed exclusively when both inputs were held at logic high ($5\,\text{V}$). For the OR gate, a high output state was produced whenever at least one input received a high signal. The NOT gate configuration correctly inverted the input state, yielding a high output of $5.12\,\text{V}$ for a low input and pulling the output down to $0.016\,\text{V}$ when a high input saturated the BJT switch. Minor variations from ideal rail voltages reflect transistor saturation drops and component tolerances.
+
+\blueSection{Conclusion}
+The fundamental Resistor-Transistor Logic (RTL) gates were successfully designed, constructed, and tested using bipolar junction transistors. Empirical verification of the truth tables confirmed that BJTs operate effectively as digital switches. Furthermore, quantitative output voltage measurements provided clear insight into practical digital state levels and switching dynamics.
+
+\blueSection{References}
+\begin{tcolorbox}[colback=gray!5, colframe=gray!40, arc=2mm]
+	\begin{enumerate}
+		\item Boylestad, R. L., \& Nashelsky, L. (2013). \textit{Electronic Devices and Circuit Theory} (11th ed.). Pearson.
+		\item Alexander, C. K., \& Sadiku, M. N. O. (2016). \textit{Fundamentals of Electric Circuits} (6th ed.). McGraw-Hill Education.
+		\item Sedra, A. S., \& Smith, K. C. (2014). \textit{Microelectronic Circuits} (7th ed.). Oxford University Press.
+	\end{enumerate}
+\end{tcolorbox}
+
+\clearpage
+\blueSection{Appendix: Signed Data Sheets}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{datasheet/sheet3.jpg}
+	\caption{Instructor-verified experimental data collection sheet (Page 1).}
+	\label{fig:datasheet9_1}
+\end{figure}
+
+\clearpage
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth, keepaspectratio]{datasheet/sheet4.jpg}
+	\caption{Instructor-verified experimental data collection sheet (Page 2).}
+	\label{fig:datasheet9_2}
+\end{figure}

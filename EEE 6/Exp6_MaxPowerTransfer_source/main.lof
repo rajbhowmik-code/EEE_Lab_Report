@@ -1,0 +1,3 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Thevenin-equivalent source ($V_{th}=\qty {8}{\volt }$, $R_i=\qty {663}{\ohm }$) driving a variable decade-box load $R_L$, used to trace the load-power curve.}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Load power $P_L$ versus load resistance $R_L$, plotted from the measured data of Table~\ref {tab:maxpowerdata}. The peak occurs at $R_L \approx \qty {663}{\ohm } = R_i$, consistent with the Maximum Power Transfer Theorem.}}{3}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Instructor-signed laboratory data sheet for this experiment.}}{5}{figure.3}%

@@ -1,0 +1,229 @@
+\section{Objective}
+\begin{itemize}[roomy]
+	\item To understand DeMorgan's Theorems and their role in Boolean algebra and digital logic design.
+	\item To verify DeMorgan's Theorems experimentally for NOT, AND and OR gates using the 7404, 7408 and 7432 logic gate ICs.
+	\item To confirm from the recorded truth tables that $\overline{A+B}=\nA\cdot\nB$ and $\overline{A\cdot B}=\nA+\nB$.
+\end{itemize}
+
+\section{Introduction}
+Digital circuits are built from a handful of basic gates, and a lot of design work comes down to rewriting an expression in a simpler or more convenient form. \textbf{DeMorgan's Theorems} are two of the most useful rules for doing that: they show how an AND operation can be turned into an OR operation (and the other way round) just by inverting the inputs and the output. This is also why a circuit can be built using only NAND or NOR gates. In this experiment we build an inverter circuit and two two-LED gate circuits on a breadboard using TTL logic gate ICs, drive them with push buttons, and compare the LED outputs with what the two theorems predict.
+
+\section{Theory}
+
+\subsection{DeMorgan's First Theorem}
+\begin{quote}\itshape
+	The complement of a logical product (AND) is equal to the logical sum (OR) of the complements of the individual variables.
+\end{quote}
+\[
+\overline{A\cdot B}=\nA+\nB
+\]
+In gate terms, a NAND gate is equivalent to an OR gate with inverted inputs (a negative-OR or ``bubbled OR'' gate).
+
+\subsection{DeMorgan's Second Theorem}
+\begin{quote}\itshape
+	The complement of a logical sum (OR) is equal to the logical product (AND) of the complements of the individual variables.
+\end{quote}
+\[
+\overline{A+B}=\nA\cdot\nB
+\]
+In gate terms, a NOR gate is equivalent to an AND gate with inverted inputs (a negative-AND or ``bubbled AND'' gate).
+
+\subsection{Extension to More Variables}
+Both theorems extend to any number of variables, for example
+\[
+\overline{A\cdot B\cdot C}=\nA+\nB+\overline{C},\qquad \overline{A+B+C}=\nA\cdot\nB\cdot\overline{C}.
+\]
+
+\subsection{Logic Gate ICs Used}
+\begin{itemize}
+	\item \textbf{7404} -- hex inverter, six independent NOT gates in one package.
+	\item \textbf{7408} -- quad 2-input AND gate, four independent AND gates in one package.
+	\item \textbf{7432} -- quad 2-input OR gate, four independent OR gates in one package.
+\end{itemize}
+All three are 14-pin TTL ICs powered from a 5\,V supply, with $V_{cc}$ on pin 14 and GND on pin 7. An LED with a series current-limiting resistor connected to a gate output shows the logic level: a HIGH output (logic 1) turns the LED on and a LOW output (logic 0) leaves it off.
+
+\section{Apparatus and Components}
+\begin{table}[H]
+	\centering
+	\caption{List of Equipment and Components Used}\label{tab:apparatus10}
+	\small
+	\begin{tabular}{@{}llc@{}}
+		\toprule
+		Item Description & Specification / Rating & Quantity \\
+		\midrule
+		Breadboard & Standard Tie-Point & 1 \\
+		Hex Inverter IC (NOT gates) & 7404 & 1 \\
+		Quad 2-Input AND Gate IC & 7408 & 1 \\
+		Quad 2-Input OR Gate IC & 7432 & 1 \\
+		LEDs & Different colours for easy identification & 2 \\
+		Current-Limiting Resistors & 220\,$\Omega$ or 330\,$\Omega$ & 2 \\
+		Push Buttons (SW1, SW2) & Momentary & 2 \\
+		DC Power Supply & 5\,V & 1 \\
+		Connecting Wires & Jumper Wires & As required \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{Circuit Diagrams}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.58\textwidth]{circuits/ic7404.png}
+	\caption{NOT Gate IC 7404 (hex inverter) pin diagram, used for the inverter circuit and to generate $\overline{A}$ and $\overline{B}$.}
+	\label{fig:ic7404}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.58\textwidth]{circuits/ic7408.png}
+	\caption{AND Gate IC 7408 (quad 2-input AND) pin diagram.}
+	\label{fig:ic7408}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.58\textwidth]{circuits/ic7432.png}
+	\caption{OR Gate IC 7432 (quad 2-input OR) pin diagram.}
+	\label{fig:ic7432}
+\end{figure}
+
+\section{Experimental Procedure}
+\textbf{Part A: Inverter (NOT gate)}
+\begin{enumerate}
+	\item Place the 7404 on the breadboard and connect $V_{cc}$ (pin 14) to $+5$\,V and GND (pin 7) to ground.
+	\item Connect push button SW1 to the input of one inverter, and connect an LED with a series resistor from that inverter's output to ground (Figure~\ref{fig:ic7404} shows the 7404 pinout).
+	\item Press and hold SW1 (input LOW) and note the LED state; release it (input HIGH) and note the LED state. Record both in the truth table.
+\end{enumerate}
+\textbf{Part B: DeMorgan's Theorem with AND gates}
+\begin{enumerate}[resume]
+	\item Place the 7408 on the breadboard and power it. Connect SW1 and SW2 to the two inputs of one AND gate and its output to LED~1 through a resistor.
+	\item Pass SW1 and SW2 through two inverters of the 7404 and feed the inverted signals $\nA$ and $\nB$ to a second AND gate, whose output drives LED~2 (7408 pinout in Figure~\ref{fig:ic7408}).
+	\item Operate SW1 and SW2 through all four input combinations and record the inverted inputs and the state of LED~1 and LED~2 each time.
+\end{enumerate}
+\textbf{Part C: DeMorgan's Theorem with OR gates}
+\begin{enumerate}[resume]
+	\item Replace the two AND gates with OR gates from the 7432 and keep the rest of the wiring the same (7432 pinout in Figure~\ref{fig:ic7432}), so that LED~1 shows $A+B$ and LED~2 shows $\nA+\nB$.
+	\item Repeat all four input combinations and record the results in a new truth table.
+\end{enumerate}
+
+\section{Theoretical Analysis}
+The expected behaviour follows directly from the two theorems. Table~\ref{tab:theory10} lists every term for all four input combinations. The columns $\overline{A+B}$ and $\nA\cdot\nB$ are identical, and so are $\overline{A\cdot B}$ and $\nA+\nB$, which proves the theorems.
+
+\begin{table}[H]
+	\centering
+	\caption{Expected Truth Table for DeMorgan's Theorems}\label{tab:theory10}
+	\small
+	\setlength{\tabcolsep}{5pt}
+	\begin{tabular}{@{}cccc|ccc|ccc@{}}
+		\toprule
+		$A$ & $B$ & $\nA$ & $\nB$ & $A\cdot B$ & $\overline{A\cdot B}$ & $\nA+\nB$ & $A+B$ & $\overline{A+B}$ & $\nA\cdot\nB$ \\
+		\midrule
+		0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\
+		0 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 \\
+		1 & 0 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 \\
+		1 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{Data Collection}
+\label{sec:datacollection10}
+
+\begin{table}[H]
+	\centering
+	\caption{Experimental Data -- Part A: Inverter (NOT Gate)}\label{tab:partA10}
+	\small
+	\begin{tabular}{@{}cc@{}}
+		\toprule
+		Input & Output (LED) \\
+		\midrule
+		0 & 1 \\
+		1 & 0 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Experimental Data -- Part B: AND Gate Configuration}\label{tab:partB10}
+	\small
+	\begin{tabular}{@{}cccccc@{}}
+		\toprule
+		Input 1 ($A$) & Input 2 ($B$) & Inverted Input 1 ($\nA$) & Inverted Input 2 ($\nB$) & LED 1 ($A\cdot B$) & LED 2 ($\nA\cdot\nB$) \\
+		\midrule
+		0 & 0 & 1 & 1 & 0 & 1 \\
+		0 & 1 & 1 & 0 & 0 & 0 \\
+		1 & 0 & 0 & 1 & 0 & 0 \\
+		1 & 1 & 0 & 0 & 1 & 0 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Experimental Data -- Part C: OR Gate Configuration}\label{tab:partC10}
+	\small
+	\begin{tabular}{@{}cccccc@{}}
+		\toprule
+		Input 1 ($A$) & Input 2 ($B$) & Inverted Input 1 ($\nA$) & Inverted Input 2 ($\nB$) & LED 1 ($A+B$) & LED 2 ($\nA+\nB$) \\
+		\midrule
+		0 & 0 & 1 & 1 & 0 & 1 \\
+		0 & 1 & 1 & 0 & 1 & 1 \\
+		1 & 0 & 0 & 1 & 1 & 1 \\
+		1 & 1 & 0 & 0 & 1 & 0 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\textit{Note: Data transcribed from the instructor-reviewed handwritten laboratory data sheet (Group 04). Logic 1 means the LED is ON and logic 0 means it is OFF.}
+
+\section{Result Analysis}
+\label{sec:resultanalysis10}
+The inverter results in Table~\ref{tab:partA10} show that the output is always the opposite of the input (0 gives 1, and 1 gives 0), so the circuit behaves as a NOT gate, as expected.
+
+To verify the second theorem, the measured LED~2 column of the AND configuration ($\nA\cdot\nB$) is compared with the complement of the measured $A+B$ column from the OR configuration. For the first theorem, the measured LED~2 column of the OR configuration ($\nA+\nB$) is compared with the complement of the measured $A\cdot B$ column from the AND configuration.
+
+\begin{table}[H]
+	\centering
+	\caption{Verification of DeMorgan's Theorems from the Measured Data}\label{tab:verification10}
+	\small
+	\setlength{\tabcolsep}{5pt}
+	\begin{tabular}{@{}cc|ccc|ccc@{}}
+		\toprule
+		$A$ & $B$ & $A+B$ & $\overline{A+B}$ & $\nA\cdot\nB$ & $A\cdot B$ & $\overline{A\cdot B}$ & $\nA+\nB$ \\
+		 &  & (measured) & (complement) & (measured) & (measured) & (complement) & (measured) \\
+		\midrule
+		0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 \\
+		0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 \\
+		1 & 0 & 1 & 0 & 0 & 0 & 1 & 1 \\
+		1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+In all four rows the $\overline{A+B}$ column matches the measured $\nA\cdot\nB$ column, and the $\overline{A\cdot B}$ column matches the measured $\nA+\nB$ column. The measured values also agree with the expected truth table (Table~\ref{tab:theory10}) in every row. A few specific observations:
+\begin{itemize}[tight]
+	\item In the AND configuration, LED~2 is ON only when both inputs are LOW, which is the NOR function, $\overline{A+B}$.
+	\item In the OR configuration, LED~2 is OFF only when both inputs are HIGH, which is the NAND function, $\overline{A\cdot B}$.
+\end{itemize}
+Since the outputs are binary, there is no numerical percentage error to report here: each of the 8 compared outputs either matches or it does not, and all of them matched. Both DeMorgan's Theorems are therefore verified.
+
+
+
+\section{Conclusion}
+This experiment verified DeMorgan's Theorems using the 7404, 7408 and 7432 logic gate ICs. The inverter produced the complement of its input, the AND configuration showed that $\nA\cdot\nB=\overline{A+B}$, and the OR configuration showed that $\nA+\nB=\overline{A\cdot B}$, with all measured outputs agreeing with the expected truth tables. This confirms that inverting the inputs of an AND gate gives an OR-type function with an inverted output, and vice versa, which is the basis for building any logic function from NAND or NOR gates alone.
+
+\section{References}
+\begin{enumerate}[tight]
+	\item Mano, M. M., \& Ciletti, M. D. (2013). \textit{Digital Design: With an Introduction to the Verilog HDL} (5th ed.). Pearson. (Chapter 2: Boolean Algebra and Logic Gates).
+	\item Floyd, T. L. (2015). \textit{Digital Fundamentals} (11th ed.). Pearson. (Chapter 4: Boolean Algebra and Logic Simplification).
+	\item Tocci, R. J., Widmer, N. S., \& Moss, G. L. (2016). \textit{Digital Systems: Principles and Applications} (12th ed.). Pearson. (Chapter 3: Describing Logic Circuits).
+\end{enumerate}
+
+\newpage
+\section{Appendix: Signed Data Sheet}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=0.74\textheight]{datasheet/sheet1.png}
+	\caption{Instructor-checked laboratory data sheet for this experiment.}
+	\label{fig:datasheet10}
+\end{figure}

@@ -1,0 +1,4 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Complete DC network with both independent voltage sources $V_1$ and $V_2$ active. The branch current $I_{R_3}$ is the response under test.}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Modified circuit with $V_1$ active and $V_2$ replaced by a short circuit, giving the isolated contribution $I_{R_3}'$.}}{2}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Modified circuit with $V_2$ active and $V_1$ replaced by a short circuit, giving the isolated contribution $I_{R_3}''$.}}{3}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Instructor-signed laboratory data sheet for this experiment.}}{6}{figure.4}%

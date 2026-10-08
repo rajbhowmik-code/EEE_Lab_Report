@@ -1,0 +1,19 @@
+\contentsline {section}{Declaration}{i}{section*.1}%
+\contentsline {section}{List of Figures}{iii}{section*.2}%
+\contentsline {section}{List of Tables}{iv}{section*.3}%
+\contentsline {section}{Objective}{1}{section*.3}%
+\contentsline {section}{Introduction}{1}{section*.3}%
+\contentsline {section}{Theory}{1}{section*.3}%
+\contentsline {subsection}{DeMorgan's First Theorem}{1}{section*.4}%
+\contentsline {subsection}{DeMorgan's Second Theorem}{1}{section*.4}%
+\contentsline {subsection}{Extension to More Variables}{1}{section*.4}%
+\contentsline {subsection}{Logic Gate ICs Used}{1}{section*.4}%
+\contentsline {section}{Apparatus and Components}{2}{section*.4}%
+\contentsline {section}{Circuit Diagrams}{2}{table.caption.5}%
+\contentsline {section}{Experimental Procedure}{3}{figure.caption.8}%
+\contentsline {section}{Theoretical Analysis}{3}{Item.8}%
+\contentsline {section}{Data Collection}{4}{table.caption.9}%
+\contentsline {section}{Result Analysis}{4}{table.caption.12}%
+\contentsline {section}{Conclusion}{5}{table.caption.13}%
+\contentsline {section}{References}{5}{table.caption.13}%
+\contentsline {section}{Appendix: Signed Data Sheet}{6}{Item.11}%
